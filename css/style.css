@@ -11,16 +11,22 @@ h1 {
 }
 
 .menu {
+    margin-top: 100px;
     display: block;
+    font-size: 30px;
     text-align: left;
     position: relative;
-    left: 40%;
-    font-family: 'Raleway', sans-serif;
+    left: 35%;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.playerNameInput {
+    width: 250px;
 }
 
 #playersOption {
     margin: 20px 0 0 0;
-    width: 100%;
+    /*width: 500px;*/
 }
 
 #playerOneName {
