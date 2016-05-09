@@ -2,6 +2,8 @@
 
 var oneWins = 0;
 var twoWins = 0;
+var oneWinsText = $('#firstScore');
+var twoWinsText = $('#secondScore');
 
 var icon = ['X', 'O'];
 
@@ -156,37 +158,90 @@ $('.square').click(function(){
 function checkWinner() {
     if (SQ1 + SQ2 + SQ3 === 3) {
         console.log("Player One wins!");
+        oneWins += 1;
+        oneWinsText.text('Player 1: ' + oneWins);
+        resetBoard();
     } else if (SQ1 + SQ2 + SQ3 === -3) {
         console.log("Player Two wins!");
+        twoWins += 1;
+        twoWinsText.text('Player 2: ' + twoWins);
+        resetBoard();
     } else if (SQ4 + SQ5 + SQ6 ===  3) {
         console.log("Player One wins!");
+        oneWins += 1;
+        oneWinsText.text('Player 1: ' + oneWins);
+        resetBoard();
     } else if (SQ4 + SQ5 + SQ6 === -3) {
         console.log("Player Two wins!");
+        twoWins += 1;
+        twoWinsText.text('Player 2: ' + twoWins);
+        resetBoard();
     } else if (SQ7 + SQ8 + SQ9 ===  3) {
         console.log("Player One wins!");
+        oneWins += 1;
+        oneWinsText.text('Player 1: ' + oneWins);
+        resetBoard();
     } else if (SQ7 + SQ8 + SQ9 === -3) {
         console.log("Player Two wins!");
+        twoWins += 1;
+        twoWinsText.text('Player 2: ' + twoWins);
+        resetBoard();
     } else if (SQ1 + SQ4 + SQ7 ===  3) {
         console.log("Player One wins!");
+        oneWins += 1;
+        oneWinsText.text('Player 1: ' + oneWins);
+        resetBoard();
     } else if (SQ1 + SQ4 + SQ7 === -3) {
         console.log("Player Two wins!");
+        twoWins += 1;
+        twoWinsText.text('Player 2: ' + twoWins);
+        resetBoard();
     } else if (SQ2 + SQ5 + SQ8 ===  3) {
         console.log("Player One wins!");
+        oneWins += 1;
+        oneWinsText.text('Player 1: ' + oneWins);
+        resetBoard();
     } else if (SQ2 + SQ5 + SQ8 === -3) {
         console.log("Player Two wins!");
+        twoWins += 1;
+        twoWinsText.text('Player 2: ' + twoWins);
+        resetBoard();
     } else if (SQ3 + SQ6 + SQ9 ===  3) {
         console.log("Player One wins!");
+        oneWins += 1;
+        oneWinsText.text('Player 1: ' + oneWins);
+        resetBoard();
     } else if (SQ3 + SQ6 + SQ9 === -3) {
         console.log("Player Two wins!");
+        twoWins += 1;
+        twoWinsText.text('Player 2: ' + twoWins);
+        resetBoard();
     } else if (SQ1 + SQ5 + SQ9 === 3) {
         console.log("Player One wins!");
+        oneWins += 1;
+        oneWinsText.text('Player 1: ' + oneWins);
+        resetBoard();
     } else if (SQ1 + SQ5 + SQ9 === -3) {
-        console.log("Player One wins!");
+        console.log("Player Two wins!");
+        twoWins += 1;
+        twoWinsText.text('Player 2: ' + twoWins);
+        resetBoard();
     } else if (SQ3 + SQ5 + SQ7 === 3) {
         console.log("Player One wins!");
+        oneWins += 1;
+        oneWinsText.text('Player 1: ' + oneWins);
+        resetBoard();
     } else if (SQ3 + SQ5 + SQ7 === -3) {
-        console.log("Player One wins!");
+        console.log("Player Two wins!");
+        twoWins += 1;
+        twoWinsText.text('Player 2: ' + twoWins);
+        resetBoard();
     } else if (SQ1 != 0 && SQ2 != 0 && SQ3 != 0 && SQ4 != 0 && SQ5 != 0 && SQ6 != 0 && SQ7 != 0 && SQ8 != 0 && SQ9 != 0) {
         console.log("Game is a draw");
+        resetBoard();
     };
 };
+
+function resetBoard() {
+    $('.square h3').remove();
+}
