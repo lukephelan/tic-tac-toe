@@ -1,5 +1,8 @@
 // Flick between players
 
+var oneWins = 0;
+var twoWins = 0;
+
 var icon = ['X', 'O'];
 
 var playerOne = icon[0];
