@@ -349,10 +349,12 @@ resetButton.on('click', function(event){
     SQ9 = 0;
     oneWins = 0;
     twoWins = 0;
-    allRows.css('display', 'flex');
-    declareWinner.text("");
+    // allRows.css('display', 'flex');
+    // declareWinner.text("");
     continueButton.css('display', 'none')
     resetButton.css('display', 'none');
-    oneWinsText.text('Player 1: ' + oneWins);
-    twoWinsText.text('Player 2: ' + twoWins);
+    // oneWinsText.text('Player 1: ' + oneWins);
+    // twoWinsText.text('Player 2: ' + twoWins);
+    menuArea.css('display', 'block');
+    declareWinner.css('display', 'none');
 });
