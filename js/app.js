@@ -34,13 +34,13 @@ numberOfPlayers.on("change", function(){
     var x = numberOfPlayers.prop('selectedIndex');
     console.log(x);
     if (x === 0) {
-        $('#playerOneName').css('display', 'inline-grid');
+        $('#playerOneName').css('display', 'block');
         $('#playerTwoName').css('display', 'none');
         console.log("One Player");
     } else if (x === 1) {
         console.log("Two Players");
-        $('#playerOneName').css('display', 'inline-grid');
-        $('#playerTwoName').css('display', 'inline-grid');
+        $('#playerOneName').css('display', 'block');
+        $('#playerTwoName').css('display', 'block');
     };
 });
 
