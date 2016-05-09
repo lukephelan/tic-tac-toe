@@ -1,5 +1,8 @@
 var resetButton = $('#reset');
+var startButton = $('#startGame');
 var boardArea = $('.board');
+var scoreArea = $('.scores');
+var menuArea = $('.menu');
 var allRows = $('.row');
 var declareWinner = $('#declareWinner');
 
@@ -25,9 +28,11 @@ var SQ8 = 0;
 var SQ9 = 0;
 
 
-
-
-// When you click the square, add the text.
+startButton.on('click', function(event) {
+    boardArea.css('display', 'block');
+    scoreArea.css('display', 'inline-block');
+    menuArea.css('display', 'none');
+});
 
 $('.square').click(function(){
     if (player === playerOne) {
