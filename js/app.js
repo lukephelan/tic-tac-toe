@@ -6,6 +6,7 @@ var scoreArea = $('.scores');
 var menuArea = $('.menu');
 var allRows = $('.row');
 var declareWinner = $('#declareWinner');
+var numberOfPlayers = $('#players');
 
 var oneWins = 0;
 var twoWins = 0;
@@ -28,6 +29,12 @@ var SQ7 = 0;
 var SQ8 = 0;
 var SQ9 = 0;
 
+
+// numberOfPlayers.addEventListener('onchange', function(){
+    var x = document.getElementById("playersOption").selectedIndex;
+    var e = document.getElementById("playersOption").options;
+    console.log(e[x].text);
+// });
 
 startButton.on('click', function(event) {
     boardArea.css('display', 'block');
@@ -171,139 +178,140 @@ function checkWinner() {
         oneWins += 1;
         oneWinsText.text('Player 1: ' + oneWins);
         allRows.css('display', 'none');
-        continueButton.show();
-        reset.show();
+        continueButton.css('display', 'inline-block');
+        resetButton.css('display', 'inline-block');
     } else if (SQ1 + SQ2 + SQ3 === -3) {
         console.log("Player Two wins!");
         declareWinner.text("Player 2 Wins!");
         twoWins += 1;
         twoWinsText.text('Player 2: ' + twoWins);
         allRows.css('display', 'none');
-        continueButton.show();
-        reset.show();
+        continueButton.css('display', 'inline-block');
+        resetButton.css('display', 'inline-block');
     } else if (SQ4 + SQ5 + SQ6 ===  3) {
         console.log("Player One wins!");
         declareWinner.text("Player 1 Wins!");
         oneWins += 1;
         oneWinsText.text('Player 1: ' + oneWins);
         allRows.css('display', 'none');
-        continueButton.show();
-        reset.show();
+        continueButton.css('display', 'inline-block');
+        resetButton.css('display', 'inline-block');
     } else if (SQ4 + SQ5 + SQ6 === -3) {
         console.log("Player Two wins!");
         declareWinner.text("Player 2 Wins!");
         twoWins += 1;
         twoWinsText.text('Player 2: ' + twoWins);
         allRows.css('display', 'none');
-        continueButton.show();
-        reset.show();
+        continueButton.css('display', 'inline-block');
+        resetButton.css('display', 'inline-block');
     } else if (SQ7 + SQ8 + SQ9 ===  3) {
         console.log("Player One wins!");
         declareWinner.text("Player 1 Wins!");
         oneWins += 1;
         oneWinsText.text('Player 1: ' + oneWins);
         allRows.css('display', 'none');
-        continueButton.show();
-        reset.show();
+        continueButton.css('display', 'inline-block');
+        resetButton.css('display', 'inline-block');
     } else if (SQ7 + SQ8 + SQ9 === -3) {
         console.log("Player Two wins!");
         declareWinner.text("Player 2 Wins!");
         twoWins += 1;
         twoWinsText.text('Player 2: ' + twoWins);
         allRows.css('display', 'none');
-        continueButton.show();
-        reset.show();
+        continueButton.css('display', 'inline-block');
+        resetButton.css('display', 'inline-block');
     } else if (SQ1 + SQ4 + SQ7 ===  3) {
         console.log("Player One wins!");
         declareWinner.text("Player 1 Wins!");
         oneWins += 1;
         oneWinsText.text('Player 1: ' + oneWins);
         allRows.css('display', 'none');
-        continueButton.show();
-        reset.show();
+        continueButton.css('display', 'inline-block');
+        resetButton.css('display', 'inline-block');
     } else if (SQ1 + SQ4 + SQ7 === -3) {
         console.log("Player Two wins!");
         declareWinner.text("Player 2 Wins!");
         twoWins += 1;
         twoWinsText.text('Player 2: ' + twoWins);
         allRows.css('display', 'none');
-        continueButton.show();
-        reset.show();
+        continueButton.css('display', 'inline-block');
+        resetButton.css('display', 'inline-block');
     } else if (SQ2 + SQ5 + SQ8 ===  3) {
         console.log("Player One wins!");
         declareWinner.text("Player 1 Wins!");
         oneWins += 1;
         oneWinsText.text('Player 1: ' + oneWins);
         allRows.css('display', 'none');
-        continueButton.show();
-        reset.show();
+        continueButton.css('display', 'inline-block');
+        resetButton.css('display', 'inline-block');
     } else if (SQ2 + SQ5 + SQ8 === -3) {
         console.log("Player Two wins!");
         declareWinner.text("Player 2 Wins!");
         twoWins += 1;
         twoWinsText.text('Player 2: ' + twoWins);
         allRows.css('display', 'none');
-        continueButton.show();
-        reset.show();
+        continueButton.css('display', 'inline-block');
+        resetButton.css('display', 'inline-block');
     } else if (SQ3 + SQ6 + SQ9 ===  3) {
         console.log("Player One wins!");
         declareWinner.text("Player 1 Wins!");
         oneWins += 1;
         oneWinsText.text('Player 1: ' + oneWins);
         allRows.css('display', 'none');
-        continueButton.show();
-        reset.show();
+        continueButton.css('display', 'inline-block');
+        resetButton.css('display', 'inline-block');
     } else if (SQ3 + SQ6 + SQ9 === -3) {
         console.log("Player Two wins!");
         declareWinner.text("Player 2 Wins!");
         twoWins += 1;
         twoWinsText.text('Player 2: ' + twoWins);
         allRows.css('display', 'none');
-        continueButton.show();
-        reset.show();
+        continueButton.css('display', 'inline-block');
+        resetButton.css('display', 'inline-block');
     } else if (SQ1 + SQ5 + SQ9 === 3) {
         console.log("Player One wins!");
         declareWinner.text("Player 1 Wins!");
         oneWins += 1;
         oneWinsText.text('Player 1: ' + oneWins);
         allRows.css('display', 'none');
-        continueButton.show();
-        reset.show();
+        continueButton.css('display', 'inline-block');
+        resetButton.css('display', 'inline-block');
     } else if (SQ1 + SQ5 + SQ9 === -3) {
         console.log("Player Two wins!");
         declareWinner.text("Player 2 Wins!");
         twoWins += 1;
         twoWinsText.text('Player 2: ' + twoWins);
         allRows.css('display', 'none');
-        continueButton.show();
-        reset.show();
+        continueButton.css('display', 'inline-block');
+        resetButton.css('display', 'inline-block');
     } else if (SQ3 + SQ5 + SQ7 === 3) {
         console.log("Player One wins!");
         declareWinner.text("Player 1 Wins!");
         oneWins += 1;
         oneWinsText.text('Player 1: ' + oneWins);
         allRows.css('display', 'none');
-        continueButton.show();
-        reset.show();
+        continueButton.css('display', 'inline-block');
+        resetButton.css('display', 'inline-block');
     } else if (SQ3 + SQ5 + SQ7 === -3) {
         console.log("Player Two wins!");
         declareWinner.text("Player 2 Wins!");
         twoWins += 1;
         twoWinsText.text('Player 2: ' + twoWins);
         allRows.css('display', 'none');
-        continueButton.show();
-        reset.show();
+        continueButton.css('display', 'inline-block');
+        resetButton.css('display', 'inline-block');
     } else if (SQ1 != 0 && SQ2 != 0 && SQ3 != 0 && SQ4 != 0 && SQ5 != 0 && SQ6 != 0 && SQ7 != 0 && SQ8 != 0 && SQ9 != 0) {
         console.log("Game is a draw");
         declareWinner.text("Draw!");
         allRows.css('display', 'none');
-        continueButton.show();
-        reset.show();
+        continueButton.css('display', 'inline-block');
+        resetButton.css('display', 'inline-block');
     };
 };
 
 continueButton.on('click', function(event){
     $('h3').remove();
+    player = playerOne;
     SQ1 = 0;
     SQ2 = 0;
     SQ3 = 0;
@@ -315,10 +323,28 @@ continueButton.on('click', function(event){
     SQ9 = 0;
     allRows.css('display', 'flex');
     declareWinner.text("");
-    continueButton.hide();
-    reset.hide();
+    continueButton.css('display', 'none')
+    resetButton.css('display', 'none');
 });
 
-reset.on('click', function(event){
-    location.reload();
+resetButton.on('click', function(event){
+    $('h3').remove();
+    player = playerOne;
+    SQ1 = 0;
+    SQ2 = 0;
+    SQ3 = 0;
+    SQ4 = 0;
+    SQ5 = 0;
+    SQ6 = 0;
+    SQ7 = 0;
+    SQ8 = 0;
+    SQ9 = 0;
+    oneWins = 0;
+    twoWins = 0;
+    allRows.css('display', 'flex');
+    declareWinner.text("");
+    continueButton.css('display', 'none')
+    resetButton.css('display', 'none');
+    oneWinsText.text('Player 1: ' + oneWins);
+    twoWinsText.text('Player 2: ' + twoWins);
 })

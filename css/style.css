@@ -18,13 +18,19 @@ h1 {
     font-family: 'Raleway', sans-serif;
 }
 
-.players {
+#playersOption {
     margin: 20px 0 0 0;
     width: 100%;
 }
 
-.playerName {
+#playerOneName {
     margin: 20px 0 0 0;
+    display: none;
+}
+
+#playerTwoName {
+    margin: 20px 0 0 0;
+    display: none;
 }
 
 .intelligence {
@@ -42,6 +48,7 @@ h1 {
     height: 600px;
     margin: 50px auto 50px auto;
     display: none;
+    text-align: center;
 }
 
 #continueButton {
@@ -49,7 +56,7 @@ h1 {
     width: 20%;
     left: 40%;
     height: 15%;
-    top: 42.5%;
+    top: 40%;
     border-style: solid;
     border-color: black;
     font-size: 20px;
@@ -64,7 +71,7 @@ h1 {
     width: 20%;
     left: 40%;
     height: 15%;
-    top: 42.5%;
+    top: 60%;
     border-style: solid;
     border-color: black;
     font-size: 20px;
@@ -175,7 +182,7 @@ h2 {
     width: 200px;
     height: 50px;
     /*border: 1px solid black;*/
-    /*margin-right: 125px;*/
+    margin-right: 125px;
     text-align: left;
 }
 
@@ -185,12 +192,13 @@ h2 {
     width: 200px;
     height: 50px;
     /*border: 1px solid black;*/
-    /*margin-left: 125px;*/
+    margin-left: 125px;
     text-align: right;
 }
 
 #declareWinner {
     position: relative;
+    top: 10%;
     display: inline-block;
     width: 200px;
     height: 50px;

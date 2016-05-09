@@ -13,16 +13,16 @@
     <h1>TIC-TAC-TOE</h1>
 
     <div class="menu">
-        <div class="players">Number of Players:
-            <select>
+        <div id="playersOption">Number of Players:
+            <select id="players">
                 <option value="1-Player">1 Player</option>
                 <option value="2-Players">2 Players</option>
             </select>
-        <form class="playerName">
+        <form id="playerOneName">
             Player 1 Name:<br>
             <input type="text" name="playerOneName")<br>
         </form>
-        <form class="playerName">
+        <form id="playerTwoName">
             Player 2 Name:<br>
             <input type="text" name="playerTwoName")<br>
         </form>
@@ -38,6 +38,7 @@
 
     <div class="board">
 
+        <h2 id="declareWinner"></h2>
         <button id="continueButton">CONTINUE</button>
         <button id="reset">NEW GAME</button>
 
@@ -60,7 +61,6 @@
 
     <div class="scores">
         <h2 id="firstScore">Player 1: 0</h2>
-        <h2 id="declareWinner"></h2>
         <h2 id="secondScore">Player 2: 0</h2>
     </div>
 
