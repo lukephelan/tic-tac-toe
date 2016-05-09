@@ -7,6 +7,7 @@ var menuArea = $('.menu');
 var allRows = $('.row');
 var declareWinner = $('#declareWinner');
 var numberOfPlayers = $('#players');
+var restrictRounds = $('#roundLimitSelection');
 
 var oneWins = 0;
 var twoWins = 0;
@@ -41,6 +42,15 @@ numberOfPlayers.on("change", function(){
         console.log("Two Players");
         $('#playerOneName').css('display', 'block');
         $('#playerTwoName').css('display', 'block');
+    };
+});
+
+restrictRounds.on("change", function(){
+    var y = restrictRounds.prop('selectedIndex');
+    if (y === 0) {
+        $('#numberOfRounds').css('display', 'none');
+    } else if (y === 1) {
+        $('#numberOfRounds').css('display', 'block');
     };
 });
 
