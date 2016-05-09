@@ -261,7 +261,7 @@ function checkWinner() {
 };
 
 resetButton.on('click', function(event){
-    
+    $('h3').remove();
     allRows.css('display', 'flex');
     resetButton.hide();
 });
