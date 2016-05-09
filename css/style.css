@@ -22,6 +22,11 @@ h1 {
 .square {
     width: 250px;
     height: 250px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 50px;
 }
 
 #SQ1 {
