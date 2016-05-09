@@ -30,11 +30,19 @@ var SQ8 = 0;
 var SQ9 = 0;
 
 
-// numberOfPlayers.addEventListener('onchange', function(){
-    var x = document.getElementById("playersOption").selectedIndex;
-    var e = document.getElementById("playersOption").options;
-    console.log(e[x].text);
-// });
+numberOfPlayers.on("change", function(){
+    var x = numberOfPlayers.prop('selectedIndex');
+    console.log(x);
+    if (x === 0) {
+        $('#playerOneName').css('display', 'inline-grid');
+        $('#playerTwoName').css('display', 'none');
+        console.log("One Player");
+    } else if (x === 1) {
+        console.log("Two Players");
+        $('#playerOneName').css('display', 'inline-grid');
+        $('#playerTwoName').css('display', 'inline-grid');
+    };
+});
 
 startButton.on('click', function(event) {
     boardArea.css('display', 'block');
@@ -347,4 +355,4 @@ resetButton.on('click', function(event){
     resetButton.css('display', 'none');
     oneWinsText.text('Player 1: ' + oneWins);
     twoWinsText.text('Player 2: ' + twoWins);
-})
+});
