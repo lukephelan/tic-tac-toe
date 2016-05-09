@@ -77,24 +77,35 @@ h1 {
 
 .scores {
     height: 50px;
-    width: 750px;
+    width: 100%;
     text-align: center;
+    border: 1px solid red;
+    display: inline-block;
+    position: relative;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    /*position: absolute;*/
 }
 
 #firstScore {
     position: relative;
     display: inline-block;
-    width: 250px
-    height: 100%;
-    left: 0;
+    width: 250px;
+    height: 50px;
     border: 1px solid black;
+    margin-right: 125px;
+    text-align: left;
 }
 
 #secondScore {
     position: relative;
     display: inline-block;
     width: 250px;
-    height: 100%;
-    right: 0;
+    height: 50px;
     border: 1px solid black;
+    margin-left: 125px;
+    text-align: left;
 }
