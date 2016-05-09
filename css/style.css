@@ -44,6 +44,21 @@ h1 {
     display: none;
 }
 
+#continueButton {
+    position: absolute;
+    width: 20%;
+    left: 40%;
+    height: 15%;
+    top: 42.5%;
+    border-style: solid;
+    border-color: black;
+    font-size: 20px;
+    font-family: 'Shadows Into Light', cursive;
+    background-color: rgb(233, 97, 27);
+    border-radius: 20px;
+    display: none;
+}
+
 #reset {
     position: absolute;
     width: 20%;
