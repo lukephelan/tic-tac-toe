@@ -12,6 +12,5 @@ var iconText = ('.square');
 
 $('.square').click(function(){
     $(this).append('<h3>' + playerOne + '</h3>');
-    // $(this).append('<h3>X</h3>');
     console.log("CLICKED");
 });
