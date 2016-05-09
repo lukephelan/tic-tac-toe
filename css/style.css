@@ -9,20 +9,20 @@ h1 {
 }
 
 .board {
-    width: 750px;
-    height: 750px;
-    margin: 100px auto 100px auto;
+    width: 600px;
+    height: 600px;
+    margin: 50px auto 50px auto;
 }
 
 .row {
     display: flex;
     width: 100%;
-    height: 250px;
+    height: 200px;
 }
 
 .square {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     text-align: center;
     position: relative;
     display: flex;
@@ -110,7 +110,7 @@ h2 {
 #firstScore {
     position: relative;
     display: inline-block;
-    width: 250px;
+    width: 200px;
     height: 50px;
     /*border: 1px solid black;*/
     margin-right: 125px;
@@ -120,7 +120,7 @@ h2 {
 #secondScore {
     position: relative;
     display: inline-block;
-    width: 250px;
+    width: 200px;
     height: 50px;
     /*border: 1px solid black;*/
     margin-left: 125px;
