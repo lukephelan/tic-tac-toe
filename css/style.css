@@ -10,6 +10,33 @@ h1 {
     font-family: 'Shadows Into Light', cursive;
 }
 
+.menu {
+    display: block;
+    text-align: left;
+    position: relative;
+    left: 40%;
+    font-family: 'Raleway', sans-serif;
+}
+
+.players {
+    margin: 20px 0 0 0;
+    width: 100%;
+}
+
+.playerName {
+    margin: 20px 0 0 0;
+}
+
+.intelligence {
+    margin: 20px 0 0 0;
+}
+
+#startGame {
+    margin: 20px 0 0 0;
+    width: 200px;
+    height: 35px;
+}
+
 .board {
     width: 600px;
     height: 600px;
