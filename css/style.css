@@ -1,9 +1,11 @@
-.body {
-    text-align: center;
+body {
+    /*background-image: url(../images/tic-tac-toe-background.jpg);*/
+    background-color: rgb(253, 255, 211);
 }
 
 h1 {
     /*border: solid black;*/
+    font-size: 60px;
     text-align: center;
     font-family: 'Shadows Into Light', cursive;
 }
@@ -116,6 +118,7 @@ h3 {
 }
 
 h2 {
+    font-size: 26px;
     margin: 0;
     padding: 0;
     /*position: absolute;*/
