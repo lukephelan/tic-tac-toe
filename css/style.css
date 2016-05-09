@@ -1,0 +1,100 @@
+.body {
+    text-align: center;
+}
+
+h1 {
+    /*border: solid black;*/
+    text-align: center;
+}
+
+.board {
+    width: 750px;
+    height: 750px;
+    margin: 100px auto 100px auto;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    height: 250px;
+}
+
+.square {
+    width: 250px;
+    height: 250px;
+}
+
+#SQ1 {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#SQ2 {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+
+#SQ3 {
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+
+#SQ4 {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#SQ5 {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+
+#SQ6 {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+
+#SQ7 {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+
+#SQ8 {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+#SQ9 {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.scores {
+    height: 50px;
+    width: 750px;
+    text-align: center;
+}
+
+#firstScore {
+    position: relative;
+    display: inline-block;
+    width: 250px
+    height: 100%;
+    left: 0;
+    border: 1px solid black;
+}
+
+#secondScore {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    height: 100%;
+    right: 0;
+    border: 1px solid black;
+}
