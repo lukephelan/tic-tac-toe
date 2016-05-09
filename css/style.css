@@ -14,6 +14,22 @@ h1 {
     margin: 50px auto 50px auto;
 }
 
+#reset {
+    position: absolute;
+    width: 20%;
+    left: 40%;
+    height: 15%;
+    top: 42.5%;
+    /*display:none;*/
+    border-style: solid;
+    border-color: black;
+    font-size: 20px;
+    font-family: 'Shadows Into Light', cursive;
+    background-color: rgb(233, 97, 27);
+    border-radius: 20px;
+    display: none;
+}
+
 .row {
     display: flex;
     width: 100%;
