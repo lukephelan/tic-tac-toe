@@ -128,7 +128,7 @@ h2 {
     width: 200px;
     height: 50px;
     /*border: 1px solid black;*/
-    margin-right: 125px;
+    /*margin-right: 125px;*/
     text-align: left;
 }
 
@@ -138,6 +138,14 @@ h2 {
     width: 200px;
     height: 50px;
     /*border: 1px solid black;*/
-    margin-left: 125px;
+    /*margin-left: 125px;*/
     text-align: right;
+}
+
+#declareWinner {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
 }
