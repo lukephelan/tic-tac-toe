@@ -1,4 +1,4 @@
-var continueButton = $('#continueButton');
+var continueButton =$('#continueButton');
 var startButton = $('#startGame');
 var resetButton = $('#reset');
 var boardArea = $('.board');
@@ -779,6 +779,7 @@ resetButton.on('click', function(event){
     $('h3').remove();
     player = playerOne;
     roundCount = 0;
+    maxrounds = null;
     SQ1 = 0;
     SQ2 = 0;
     SQ3 = 0;
