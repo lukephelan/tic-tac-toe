@@ -307,7 +307,7 @@ function playerTwoWins(){
 function gameIsDraw(){
     console.log("Game is a draw");
     declareWinner.text("Draw!");
-    round += 1;
+    roundCount += 1;
     playerOneScore.css({'border': 'none', 'animation': 'none'});
     playerTwoScore.css({'border': 'none', 'animation': 'none'});
     setTimeout(clearScreen, 2000);
