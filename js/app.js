@@ -8,6 +8,9 @@ var allRows = $('.row');
 var declareWinner = $('#declareWinner');
 var numberOfPlayers = $('#players');
 var restrictRounds = $('#roundLimitSelection');
+var numberOfRounds = $('#numberOfRounds')
+var playerOneName = $('#playerOneName');
+var playerTwoName = $('#playerTwoName');
 
 var oneWins = 0;
 var twoWins = 0;
@@ -35,22 +38,22 @@ numberOfPlayers.on("change", function(){
     var x = numberOfPlayers.prop('selectedIndex');
     console.log(x);
     if (x === 0) {
-        $('#playerOneName').css('display', 'block');
-        $('#playerTwoName').css('display', 'none');
+        playerOneName.css('display', 'block');
+        playerTwoName.css('display', 'none');
         console.log("One Player");
     } else if (x === 1) {
         console.log("Two Players");
-        $('#playerOneName').css('display', 'block');
-        $('#playerTwoName').css('display', 'block');
+        playerOneName.css('display', 'block');
+        playerTwoName.css('display', 'block');
     };
 });
 
 restrictRounds.on("change", function(){
     var y = restrictRounds.prop('selectedIndex');
     if (y === 0) {
-        $('#numberOfRounds').css('display', 'none');
+        numberOfRounds.css('display', 'none');
     } else if (y === 1) {
-        $('#numberOfRounds').css('display', 'block');
+        numberOfRounds.css('display', 'block');
     };
 });
 
