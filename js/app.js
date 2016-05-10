@@ -11,6 +11,8 @@ var restrictRounds = $('#roundLimitSelection');
 var numberOfRounds = $('#numberOfRounds')
 var playerOneName = $('#playerOneName');
 var playerTwoName = $('#playerTwoName');
+var playerOneScore = $('#firstScore');
+var playerTwoScore = $('#secondScore');
 
 var oneWins = 0;
 var twoWins = 0;
@@ -62,8 +64,10 @@ startButton.on('click', function(event) {
     boardArea.css('display', 'block');
     scoreArea.css('display', 'inline-block');
     allRows.css('display', 'flex');
-    oneWinsText.text('Player 1: ' + oneWins);
-    twoWinsText.text('Player 2: ' + twoWins);
+    playerOneNameText = $('#playerOneName input').val();
+    playerTwoNameText = $('#playerTwoName input').val();
+    oneWinsText.text(playerOneNameText + ": " + oneWins);
+    twoWinsText.text(playerTwoNameText + ": " + twoWins);
 });
 
 
@@ -202,7 +206,7 @@ function checkWinner() {
         console.log("Player One wins!");
         declareWinner.text("Player 1 Wins!");
         oneWins += 1;
-        oneWinsText.text('Player 1: ' + oneWins);
+        oneWinsText.text(playerOneNameText + ": " + oneWins);
         allRows.css('display', 'none');
         continueButton.css('display', 'inline-block');
         resetButton.css('display', 'inline-block');
@@ -210,7 +214,7 @@ function checkWinner() {
         console.log("Player Two wins!");
         declareWinner.text("Player 2 Wins!");
         twoWins += 1;
-        twoWinsText.text('Player 2: ' + twoWins);
+        twoWinsText.text(playerTwoNameText + ": " + twoWins);
         allRows.css('display', 'none');
         continueButton.css('display', 'inline-block');
         resetButton.css('display', 'inline-block');
@@ -218,7 +222,7 @@ function checkWinner() {
         console.log("Player One wins!");
         declareWinner.text("Player 1 Wins!");
         oneWins += 1;
-        oneWinsText.text('Player 1: ' + oneWins);
+        oneWinsText.text(playerOneNameText + ": " + oneWins);
         allRows.css('display', 'none');
         continueButton.css('display', 'inline-block');
         resetButton.css('display', 'inline-block');
@@ -226,7 +230,7 @@ function checkWinner() {
         console.log("Player Two wins!");
         declareWinner.text("Player 2 Wins!");
         twoWins += 1;
-        twoWinsText.text('Player 2: ' + twoWins);
+        twoWinsText.text(playerTwoNameText + ": " + twoWins);
         allRows.css('display', 'none');
         continueButton.css('display', 'inline-block');
         resetButton.css('display', 'inline-block');
@@ -234,7 +238,7 @@ function checkWinner() {
         console.log("Player One wins!");
         declareWinner.text("Player 1 Wins!");
         oneWins += 1;
-        oneWinsText.text('Player 1: ' + oneWins);
+        oneWinsText.text(playerOneNameText + ": " + oneWins);
         allRows.css('display', 'none');
         continueButton.css('display', 'inline-block');
         resetButton.css('display', 'inline-block');
@@ -242,7 +246,7 @@ function checkWinner() {
         console.log("Player Two wins!");
         declareWinner.text("Player 2 Wins!");
         twoWins += 1;
-        twoWinsText.text('Player 2: ' + twoWins);
+        twoWinsText.text(playerTwoNameText + ": " + twoWins);
         allRows.css('display', 'none');
         continueButton.css('display', 'inline-block');
         resetButton.css('display', 'inline-block');
@@ -250,7 +254,7 @@ function checkWinner() {
         console.log("Player One wins!");
         declareWinner.text("Player 1 Wins!");
         oneWins += 1;
-        oneWinsText.text('Player 1: ' + oneWins);
+        oneWinsText.text(playerOneNameText + ": " + oneWins);
         allRows.css('display', 'none');
         continueButton.css('display', 'inline-block');
         resetButton.css('display', 'inline-block');
@@ -258,7 +262,7 @@ function checkWinner() {
         console.log("Player Two wins!");
         declareWinner.text("Player 2 Wins!");
         twoWins += 1;
-        twoWinsText.text('Player 2: ' + twoWins);
+        twoWinsText.text(playerTwoNameText + ": " + twoWins);
         allRows.css('display', 'none');
         continueButton.css('display', 'inline-block');
         resetButton.css('display', 'inline-block');
@@ -266,7 +270,7 @@ function checkWinner() {
         console.log("Player One wins!");
         declareWinner.text("Player 1 Wins!");
         oneWins += 1;
-        oneWinsText.text('Player 1: ' + oneWins);
+        oneWinsText.text(playerOneNameText + ": " + oneWins);
         allRows.css('display', 'none');
         continueButton.css('display', 'inline-block');
         resetButton.css('display', 'inline-block');
@@ -274,7 +278,7 @@ function checkWinner() {
         console.log("Player Two wins!");
         declareWinner.text("Player 2 Wins!");
         twoWins += 1;
-        twoWinsText.text('Player 2: ' + twoWins);
+        twoWinsText.text(playerTwoNameText + ": " + twoWins);
         allRows.css('display', 'none');
         continueButton.css('display', 'inline-block');
         resetButton.css('display', 'inline-block');
@@ -282,7 +286,7 @@ function checkWinner() {
         console.log("Player One wins!");
         declareWinner.text("Player 1 Wins!");
         oneWins += 1;
-        oneWinsText.text('Player 1: ' + oneWins);
+        oneWinsText.text(playerOneNameText + ": " + oneWins);
         allRows.css('display', 'none');
         continueButton.css('display', 'inline-block');
         resetButton.css('display', 'inline-block');
@@ -290,7 +294,7 @@ function checkWinner() {
         console.log("Player Two wins!");
         declareWinner.text("Player 2 Wins!");
         twoWins += 1;
-        twoWinsText.text('Player 2: ' + twoWins);
+        twoWinsText.text(playerTwoNameText + ": " + twoWins);
         allRows.css('display', 'none');
         continueButton.css('display', 'inline-block');
         resetButton.css('display', 'inline-block');
@@ -298,7 +302,7 @@ function checkWinner() {
         console.log("Player One wins!");
         declareWinner.text("Player 1 Wins!");
         oneWins += 1;
-        oneWinsText.text('Player 1: ' + oneWins);
+        oneWinsText.text(playerOneNameText + ": " + oneWins);
         allRows.css('display', 'none');
         continueButton.css('display', 'inline-block');
         resetButton.css('display', 'inline-block');
@@ -306,7 +310,7 @@ function checkWinner() {
         console.log("Player Two wins!");
         declareWinner.text("Player 2 Wins!");
         twoWins += 1;
-        twoWinsText.text('Player 2: ' + twoWins);
+        twoWinsText.text(playerTwoNameText + ": " + twoWins);
         allRows.css('display', 'none');
         continueButton.css('display', 'inline-block');
         resetButton.css('display', 'inline-block');
@@ -314,7 +318,7 @@ function checkWinner() {
         console.log("Player One wins!");
         declareWinner.text("Player 1 Wins!");
         oneWins += 1;
-        oneWinsText.text('Player 1: ' + oneWins);
+        oneWinsText.text(playerOneNameText + ": " + oneWins);
         allRows.css('display', 'none');
         continueButton.css('display', 'inline-block');
         resetButton.css('display', 'inline-block');
@@ -322,7 +326,7 @@ function checkWinner() {
         console.log("Player Two wins!");
         declareWinner.text("Player 2 Wins!");
         twoWins += 1;
-        twoWinsText.text('Player 2: ' + twoWins);
+        twoWinsText.text(playerTwoNameText + ": " + twoWins);
         allRows.css('display', 'none');
         continueButton.css('display', 'inline-block');
         resetButton.css('display', 'inline-block');
