@@ -155,7 +155,7 @@ function onePlayerEasy(){
                     // setTimeout(computerTurnEasy, 1000);
                 };
             };
-
+            setTimeout(computerTurnEasy, 1000);
             checkWinnerEasy();
 
         // } else if (player === playerTwo) {
@@ -242,7 +242,7 @@ function computerTurnEasy(){
             computerTurnEasy();
         };
     };
-    checkWinner();
+    checkWinnerEasy();
 };
 
 function checkWinnerEasy() {
@@ -346,8 +346,6 @@ function checkWinnerEasy() {
         console.log("Game is a draw");
         declareWinner.text("Draw!");
         setTimeout(clearScreen, 3000);
-    } else {
-        setTimeout(computerTurnEasy, 1000);
     };
 };
 
