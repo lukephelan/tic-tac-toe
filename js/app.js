@@ -106,7 +106,8 @@ function onePlayerEasy(){
                     SQ1 = 1;
                     roundCount += 1;
                     player = playerTwo;
-                    // setTimeout(computerTurnEasy, 1000);
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ2") {
                 if (SQ2 === 0) {
@@ -114,7 +115,8 @@ function onePlayerEasy(){
                     SQ2 = 1;
                     roundCount += 1;
                     player = playerTwo;
-                    // setTimeout(computerTurnEasy, 1000);
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ3") {
                 if (SQ3 === 0) {
@@ -122,7 +124,8 @@ function onePlayerEasy(){
                     SQ3 = 1;
                     roundCount += 1;
                     player = playerTwo;
-                    // setTimeout(computerTurnEasy, 1000);
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ4") {
                 if (SQ4 === 0) {
@@ -130,7 +133,8 @@ function onePlayerEasy(){
                     SQ4 = 1;
                     roundCount += 1;
                     player = playerTwo;
-                    // setTimeout(computerTurnEasy, 1000);
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ5") {
                 if (SQ5 === 0) {
@@ -138,7 +142,8 @@ function onePlayerEasy(){
                     SQ5 = 1;
                     roundCount += 1;
                     player = playerTwo;
-                    // setTimeout(computerTurnEasy, 1000);
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ6") {
                 if (SQ6 === 0) {
@@ -146,7 +151,8 @@ function onePlayerEasy(){
                     SQ6 = 1;
                     roundCount += 1;
                     player = playerTwo;
-                    // setTimeout(computerTurnEasy, 1000);
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ7") {
                 if (SQ7 === 0) {
@@ -154,7 +160,8 @@ function onePlayerEasy(){
                     SQ7 = 1;
                     roundCount += 1;
                     player = playerTwo;
-                    // setTimeout(computerTurnEasy, 1000);
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ8") {
                 if (SQ8 === 0) {
@@ -162,7 +169,8 @@ function onePlayerEasy(){
                     SQ8 = 1;
                     roundCount += 1;
                     player = playerTwo;
-                    // setTimeout(computerTurnEasy, 1000);
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ9") {
                 if (SQ9 === 0) {
@@ -170,7 +178,8 @@ function onePlayerEasy(){
                     SQ9 = 1;
                     roundCount += 1;
                     player = playerTwo;
-                    // setTimeout(computerTurnEasy, 1000);
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             };
             // setTimeout(computerTurnEasy, 1000);
@@ -193,6 +202,8 @@ function computerTurnEasy(){
             SQ1 = -1;
             roundCount += 1;
             player = playerOne;
+            playerTwoScore.css({'border': 'none', 'animation': 'none'});
+            playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
         } else {
             computerTurnEasy();
         };
@@ -202,6 +213,8 @@ function computerTurnEasy(){
             SQ2 = -1;
             roundCount += 1;
             player = playerOne;
+            playerTwoScore.css({'border': 'none', 'animation': 'none'});
+            playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
         } else {
             computerTurnEasy();
         };
@@ -211,6 +224,8 @@ function computerTurnEasy(){
             SQ3 = -1;
             roundCount += 1;
             player = playerOne;
+            playerTwoScore.css({'border': 'none', 'animation': 'none'});
+            playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
         } else {
             computerTurnEasy();
         };
@@ -220,6 +235,8 @@ function computerTurnEasy(){
             SQ4 = -1;
             roundCount += 1;
             player = playerOne;
+            playerTwoScore.css({'border': 'none', 'animation': 'none'});
+            playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
         } else {
             computerTurnEasy();
         };
@@ -229,6 +246,8 @@ function computerTurnEasy(){
             SQ5 = -1;
             roundCount += 1;
             player = playerOne;
+            playerTwoScore.css({'border': 'none', 'animation': 'none'});
+            playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
         } else {
             computerTurnEasy();
         };
@@ -238,6 +257,8 @@ function computerTurnEasy(){
             SQ6 = -1;
             roundCount += 1;
             player = playerOne;
+            playerTwoScore.css({'border': 'none', 'animation': 'none'});
+            playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
         } else {
             computerTurnEasy();
         };
@@ -247,6 +268,8 @@ function computerTurnEasy(){
             SQ7 = -1;
             roundCount += 1;
             player = playerOne;
+            playerTwoScore.css({'border': 'none', 'animation': 'none'});
+            playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
         } else {
             computerTurnEasy();
         };
@@ -256,6 +279,8 @@ function computerTurnEasy(){
             SQ8 = -1;
             roundCount += 1;
             player = playerOne;
+            playerTwoScore.css({'border': 'none', 'animation': 'none'});
+            playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
         } else {
             computerTurnEasy();
         };
@@ -265,6 +290,8 @@ function computerTurnEasy(){
             SQ9 = -1;
             roundCount += 1;
             player = playerOne;
+            playerTwoScore.css({'border': 'none', 'animation': 'none'});
+            playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
         } else {
             computerTurnEasy();
         };
@@ -278,100 +305,134 @@ function checkWinnerEasy() {
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ1 + SQ2 + SQ3 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ4 + SQ5 + SQ6 ===  3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ4 + SQ5 + SQ6 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ7 + SQ8 + SQ9 ===  3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ7 + SQ8 + SQ9 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ1 + SQ4 + SQ7 ===  3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ1 + SQ4 + SQ7 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ2 + SQ5 + SQ8 ===  3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ2 + SQ5 + SQ8 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ3 + SQ6 + SQ9 ===  3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ3 + SQ6 + SQ9 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ1 + SQ5 + SQ9 === 3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ1 + SQ5 + SQ9 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ3 + SQ5 + SQ7 === 3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ3 + SQ5 + SQ7 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ1 != 0 && SQ2 != 0 && SQ3 != 0 && SQ4 != 0 && SQ5 != 0 && SQ6 != 0 && SQ7 != 0 && SQ8 != 0 && SQ9 != 0) {
         console.log("Game is a draw");
         declareWinner.text("Draw!");
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (player === playerTwo){
         setTimeout(computerTurnEasy, 1000);
@@ -389,7 +450,8 @@ function onePlayerHard(){
                     SQ1 = 1;
                     roundCount += 1;
                     player = playerTwo;
-                    // setTimeout(computerTurnEasy, 1000);
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ2") {
                 if (SQ2 === 0) {
@@ -397,7 +459,8 @@ function onePlayerHard(){
                     SQ2 = 1;
                     roundCount += 1;
                     player = playerTwo;
-                    // setTimeout(computerTurnEasy, 1000);
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ3") {
                 if (SQ3 === 0) {
@@ -405,7 +468,8 @@ function onePlayerHard(){
                     SQ3 = 1;
                     roundCount += 1;
                     player = playerTwo;
-                    // setTimeout(computerTurnEasy, 1000);
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ4") {
                 if (SQ4 === 0) {
@@ -413,7 +477,8 @@ function onePlayerHard(){
                     SQ4 = 1;
                     roundCount += 1;
                     player = playerTwo;
-                    // setTimeout(computerTurnEasy, 1000);
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ5") {
                 if (SQ5 === 0) {
@@ -421,7 +486,8 @@ function onePlayerHard(){
                     SQ5 = 1;
                     roundCount += 1;
                     player = playerTwo;
-                    // setTimeout(computerTurnEasy, 1000);
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ6") {
                 if (SQ6 === 0) {
@@ -429,7 +495,8 @@ function onePlayerHard(){
                     SQ6 = 1;
                     roundCount += 1;
                     player = playerTwo;
-                    // setTimeout(computerTurnEasy, 1000);
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ7") {
                 if (SQ7 === 0) {
@@ -437,7 +504,8 @@ function onePlayerHard(){
                     SQ7 = 1;
                     roundCount += 1;
                     player = playerTwo;
-                    // setTimeout(computerTurnEasy, 1000);
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ8") {
                 if (SQ8 === 0) {
@@ -445,7 +513,8 @@ function onePlayerHard(){
                     SQ8 = 1;
                     roundCount += 1;
                     player = playerTwo;
-                    // setTimeout(computerTurnEasy, 1000);
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ9") {
                 if (SQ9 === 0) {
@@ -453,7 +522,8 @@ function onePlayerHard(){
                     SQ9 = 1;
                     roundCount += 1;
                     player = playerTwo;
-                    // setTimeout(computerTurnEasy, 1000);
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             };
             // setTimeout(computerTurnEasy, 1000);
@@ -476,6 +546,8 @@ function computerTurnHard(){
             SQ1 = -1;
             roundCount += 1;
             player = playerOne;
+            playerTwoScore.css({'border': 'none', 'animation': 'none'});
+            playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
         } else {
             computerTurnHard();
         };
@@ -485,6 +557,8 @@ function computerTurnHard(){
             SQ2 = -1;
             roundCount += 1;
             player = playerOne;
+            playerTwoScore.css({'border': 'none', 'animation': 'none'});
+            playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
         } else {
             computerTurnHard();
         };
@@ -494,6 +568,8 @@ function computerTurnHard(){
             SQ3 = -1;
             roundCount += 1;
             player = playerOne;
+            playerTwoScore.css({'border': 'none', 'animation': 'none'});
+            playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
         } else {
             computerTurnHard();
         };
@@ -503,6 +579,8 @@ function computerTurnHard(){
             SQ4 = -1;
             roundCount += 1;
             player = playerOne;
+            playerTwoScore.css({'border': 'none', 'animation': 'none'});
+            playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
         } else {
             computerTurnHard();
         };
@@ -512,6 +590,8 @@ function computerTurnHard(){
             SQ5 = -1;
             roundCount += 1;
             player = playerOne;
+            playerTwoScore.css({'border': 'none', 'animation': 'none'});
+            playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
         } else {
             computerTurnHard();
         };
@@ -521,6 +601,8 @@ function computerTurnHard(){
             SQ6 = -1;
             roundCount += 1;
             player = playerOne;
+            playerTwoScore.css({'border': 'none', 'animation': 'none'});
+            playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
         } else {
             computerTurnHard();
         };
@@ -530,6 +612,8 @@ function computerTurnHard(){
             SQ7 = -1;
             roundCount += 1;
             player = playerOne;
+            playerTwoScore.css({'border': 'none', 'animation': 'none'});
+            playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
         } else {
             computerTurnHard();
         };
@@ -539,6 +623,8 @@ function computerTurnHard(){
             SQ8 = -1;
             roundCount += 1;
             player = playerOne;
+            playerTwoScore.css({'border': 'none', 'animation': 'none'});
+            playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
         } else {
             computerTurnHard();
         };
@@ -548,6 +634,8 @@ function computerTurnHard(){
             SQ9 = -1;
             roundCount += 1;
             player = playerOne;
+            playerTwoScore.css({'border': 'none', 'animation': 'none'});
+            playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
         } else {
             computerTurnHard();
         };
@@ -561,100 +649,134 @@ function checkWinnerHard() {
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ1 + SQ2 + SQ3 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ4 + SQ5 + SQ6 ===  3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ4 + SQ5 + SQ6 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ7 + SQ8 + SQ9 ===  3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ7 + SQ8 + SQ9 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ1 + SQ4 + SQ7 ===  3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ1 + SQ4 + SQ7 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ2 + SQ5 + SQ8 ===  3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ2 + SQ5 + SQ8 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ3 + SQ6 + SQ9 ===  3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ3 + SQ6 + SQ9 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ1 + SQ5 + SQ9 === 3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ1 + SQ5 + SQ9 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ3 + SQ5 + SQ7 === 3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ3 + SQ5 + SQ7 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ1 != 0 && SQ2 != 0 && SQ3 != 0 && SQ4 != 0 && SQ5 != 0 && SQ6 != 0 && SQ7 != 0 && SQ8 != 0 && SQ9 != 0) {
         console.log("Game is a draw");
         declareWinner.text("Draw!");
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (player === playerTwo){
         setTimeout(computerTurnEasy, 1000);
@@ -672,6 +794,8 @@ function twoPlayer(){
                     SQ1 = 1;
                     roundCount += 1;
                     player = playerTwo;
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ2") {
                 if (SQ2 === 0) {
@@ -679,6 +803,8 @@ function twoPlayer(){
                     SQ2 = 1;
                     roundCount += 1;
                     player = playerTwo;
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ3") {
                 if (SQ3 === 0) {
@@ -686,6 +812,8 @@ function twoPlayer(){
                     SQ3 = 1;
                     roundCount += 1;
                     player = playerTwo;
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ4") {
                 if (SQ4 === 0) {
@@ -693,6 +821,8 @@ function twoPlayer(){
                     SQ4 = 1;
                     roundCount += 1;
                     player = playerTwo;
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ5") {
                 if (SQ5 === 0) {
@@ -700,6 +830,8 @@ function twoPlayer(){
                     SQ5 = 1;
                     roundCount += 1;
                     player = playerTwo;
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ6") {
                 if (SQ6 === 0) {
@@ -707,6 +839,8 @@ function twoPlayer(){
                     SQ6 = 1;
                     roundCount += 1;
                     player = playerTwo;
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ7") {
                 if (SQ7 === 0) {
@@ -714,6 +848,8 @@ function twoPlayer(){
                     SQ7 = 1;
                     roundCount += 1;
                     player = playerTwo;
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ8") {
                 if (SQ8 === 0) {
@@ -721,6 +857,8 @@ function twoPlayer(){
                     SQ8 = 1;
                     roundCount += 1;
                     player = playerTwo;
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ9") {
                 if (SQ9 === 0) {
@@ -728,6 +866,8 @@ function twoPlayer(){
                     SQ9 = 1;
                     roundCount += 1;
                     player = playerTwo;
+                    playerOneScore.css({'border': 'none', 'animation': 'none'});
+                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             };
 
@@ -744,6 +884,8 @@ function twoPlayer(){
                     SQ1 = -1;
                     roundCount += 1;
                     player = playerOne;
+                    playerTwoScore.css({'border': 'none', 'animation': 'none'});
+                    playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ2") {
                 if (SQ2 === 0) {
@@ -751,6 +893,8 @@ function twoPlayer(){
                     SQ2 = -1;
                     roundCount += 1;
                     player = playerOne;
+                    playerTwoScore.css({'border': 'none', 'animation': 'none'});
+                    playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ3") {
                 if (SQ3 === 0) {
@@ -758,6 +902,8 @@ function twoPlayer(){
                     SQ3 = -1;
                     roundCount += 1;
                     player = playerOne;
+                    playerTwoScore.css({'border': 'none', 'animation': 'none'});
+                    playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ4") {
                 if (SQ4 === 0) {
@@ -765,6 +911,8 @@ function twoPlayer(){
                     SQ4 = -1;
                     roundCount += 1;
                     player = playerOne;
+                    playerTwoScore.css({'border': 'none', 'animation': 'none'});
+                    playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ5") {
                 if (SQ5 === 0) {
@@ -772,6 +920,8 @@ function twoPlayer(){
                     SQ5 = -1;
                     roundCount += 1;
                     player = playerOne;
+                    playerTwoScore.css({'border': 'none', 'animation': 'none'});
+                    playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ6") {
                 if (SQ6 === 0) {
@@ -779,6 +929,8 @@ function twoPlayer(){
                     SQ6 = -1;
                     roundCount += 1;
                     player = playerOne;
+                    playerTwoScore.css({'border': 'none', 'animation': 'none'});
+                    playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ7") {
                 if (SQ7 === 0) {
@@ -786,6 +938,8 @@ function twoPlayer(){
                     SQ7 = -1;
                     roundCount += 1;
                     player = playerOne;
+                    playerTwoScore.css({'border': 'none', 'animation': 'none'});
+                    playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ8") {
                 if (SQ8 === 0) {
@@ -793,6 +947,8 @@ function twoPlayer(){
                     SQ8 = -1;
                     roundCount += 1;
                     player = playerOne;
+                    playerTwoScore.css({'border': 'none', 'animation': 'none'});
+                    playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             } else if (square === "SQ9") {
                 if (SQ9 === 0) {
@@ -800,6 +956,8 @@ function twoPlayer(){
                     SQ9 = -1;
                     roundCount += 1;
                     player = playerOne;
+                    playerTwoScore.css({'border': 'none', 'animation': 'none'});
+                    playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
                 };
             };
 
@@ -817,100 +975,134 @@ function checkWinner() {
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ1 + SQ2 + SQ3 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ4 + SQ5 + SQ6 ===  3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ4 + SQ5 + SQ6 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ7 + SQ8 + SQ9 ===  3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ7 + SQ8 + SQ9 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ1 + SQ4 + SQ7 ===  3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ1 + SQ4 + SQ7 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ2 + SQ5 + SQ8 ===  3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ2 + SQ5 + SQ8 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ3 + SQ6 + SQ9 ===  3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ3 + SQ6 + SQ9 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ1 + SQ5 + SQ9 === 3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ1 + SQ5 + SQ9 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ3 + SQ5 + SQ7 === 3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ3 + SQ5 + SQ7 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     } else if (SQ1 != 0 && SQ2 != 0 && SQ3 != 0 && SQ4 != 0 && SQ5 != 0 && SQ6 != 0 && SQ7 != 0 && SQ8 != 0 && SQ9 != 0) {
         console.log("Game is a draw");
         declareWinner.text("Draw!");
+        playerOneScore.css({'border': 'none', 'animation': 'none'});
+        playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
     };
 };
@@ -927,6 +1119,8 @@ function clearScreen(){
 continueButton.on('click', function(event){
     $('h3').remove();
     player = playerOne;
+    playerTwoScore.css({'border': 'none', 'animation': 'none'});
+    playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
     SQ1 = 0;
     SQ2 = 0;
     SQ3 = 0;

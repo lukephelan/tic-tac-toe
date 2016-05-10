@@ -243,6 +243,9 @@ h3 {
     height: 50px;
     margin-right: 100px;
     text-align: left;
+    border: solid rgb(247, 54, 54);
+    border-radius: 10px;
+    animation: blinker 1s linear infinite;
 }
 
 #secondScore {
@@ -253,4 +256,11 @@ h3 {
     margin-top: 50px;
     margin-left: 100px;
     text-align: right;
+    /*border: solid rgb(247, 54, 54);
+    border-radius: 10px;
+    animation: blinker 1s linear infinite;*/
+}
+
+@keyframes blinker {
+  50% { opacity: 0.0; }
 }
