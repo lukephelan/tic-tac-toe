@@ -17,7 +17,7 @@ var playerOneScore = $('#firstScore');
 var playerTwoScore = $('#secondScore');
 var roundDisplayCount = $('#roundCountDisplay');
 
-var roundCount = 0;
+var roundCount = 1;
 var maxRounds;
 
 var oneWins = 0;
@@ -778,7 +778,7 @@ resetButton.on('click', function(event){
     $('.square').off();
     $('h3').remove();
     player = playerOne;
-    roundCount = 0;
+    roundCount = 1;
     maxrounds = null;
     SQ1 = 0;
     SQ2 = 0;
