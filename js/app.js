@@ -251,101 +251,101 @@ function checkWinnerEasy() {
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
-        setTimeout(clearScreen, 3000);
+        setTimeout(clearScreen, 2000);
     } else if (SQ1 + SQ2 + SQ3 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
-        setTimeout(clearScreen, 3000);
+        setTimeout(clearScreen, 2000);
     } else if (SQ4 + SQ5 + SQ6 ===  3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
-        setTimeout(clearScreen, 3000);
+        setTimeout(clearScreen, 2000);
     } else if (SQ4 + SQ5 + SQ6 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
-        setTimeout(clearScreen, 3000);
+        setTimeout(clearScreen, 2000);
     } else if (SQ7 + SQ8 + SQ9 ===  3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
-        setTimeout(clearScreen, 3000);
+        setTimeout(clearScreen, 2000);
     } else if (SQ7 + SQ8 + SQ9 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
-        setTimeout(clearScreen, 3000);
+        setTimeout(clearScreen, 2000);
     } else if (SQ1 + SQ4 + SQ7 ===  3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
-        setTimeout(clearScreen, 3000);
+        setTimeout(clearScreen, 2000);
     } else if (SQ1 + SQ4 + SQ7 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
-        setTimeout(clearScreen, 3000);
+        setTimeout(clearScreen, 2000);
     } else if (SQ2 + SQ5 + SQ8 ===  3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
-        setTimeout(clearScreen, 3000);
+        setTimeout(clearScreen, 2000);
     } else if (SQ2 + SQ5 + SQ8 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
-        setTimeout(clearScreen, 3000);
+        setTimeout(clearScreen, 2000);
     } else if (SQ3 + SQ6 + SQ9 ===  3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
-        setTimeout(clearScreen, 3000);
+        setTimeout(clearScreen, 2000);
     } else if (SQ3 + SQ6 + SQ9 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
-        setTimeout(clearScreen, 3000);
+        setTimeout(clearScreen, 2000);
     } else if (SQ1 + SQ5 + SQ9 === 3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
-        setTimeout(clearScreen, 3000);
+        setTimeout(clearScreen, 2000);
     } else if (SQ1 + SQ5 + SQ9 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
-        setTimeout(clearScreen, 3000);
+        setTimeout(clearScreen, 2000);
     } else if (SQ3 + SQ5 + SQ7 === 3) {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
-        setTimeout(clearScreen, 3000);
+        setTimeout(clearScreen, 2000);
     } else if (SQ3 + SQ5 + SQ7 === -3) {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
-        setTimeout(clearScreen, 3000);
+        setTimeout(clearScreen, 2000);
     } else if (SQ1 != 0 && SQ2 != 0 && SQ3 != 0 && SQ4 != 0 && SQ5 != 0 && SQ6 != 0 && SQ7 != 0 && SQ8 != 0 && SQ9 != 0) {
         console.log("Game is a draw");
         declareWinner.text("Draw!");
-        setTimeout(clearScreen, 3000);
+        setTimeout(clearScreen, 2000);
     } else if (player === playerTwo){
         setTimeout(computerTurnEasy, 1000);
     };
