@@ -68,10 +68,11 @@ startButton.on('click', function(event) {
     var x = numberOfPlayers.prop('selectedIndex');
     console.log(x);
     if (x === 0) {
-        playerTwoNameText = $('#playerTwoName input').val("Computer");
+        playerTwoNameText = "Computer";
     } else if (x === 1) {
         playerTwoNameText = $('#playerTwoName input').val();
     };
+    console.log(playerTwoNameText);
     oneWinsText.text(playerOneNameText + ": " + oneWins);
     twoWinsText.text(playerTwoNameText + ": " + twoWins);
 });
