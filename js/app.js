@@ -96,63 +96,63 @@ function onePlayerEasy(){
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ1 = 1;
                     player = playerTwo;
-                    computerTurnEasy();
+                    setTimeout(computerTurnEasy, 1000);
                 };
             } else if (square === "SQ2") {
                 if (SQ2 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ2 = 1;
                     player = playerTwo;
-                    computerTurnEasy();
+                    setTimeout(computerTurnEasy, 1000);
                 };
             } else if (square === "SQ3") {
                 if (SQ3 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ3 = 1;
                     player = playerTwo;
-                    computerTurnEasy();
+                    setTimeout(computerTurnEasy, 1000);
                 };
             } else if (square === "SQ4") {
                 if (SQ4 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ4 = 1;
                     player = playerTwo;
-                    computerTurnEasy();
+                    setTimeout(computerTurnEasy, 1000);
                 };
             } else if (square === "SQ5") {
                 if (SQ5 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ5 = 1;
                     player = playerTwo;
-                    computerTurnEasy();
+                    setTimeout(computerTurnEasy, 1000);
                 };
             } else if (square === "SQ6") {
                 if (SQ6 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ6 = 1;
                     player = playerTwo;
-                    computerTurnEasy();
+                    setTimeout(computerTurnEasy, 1000);
                 };
             } else if (square === "SQ7") {
                 if (SQ7 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ7 = 1;
                     player = playerTwo;
-                    computerTurnEasy();
+                    setTimeout(computerTurnEasy, 1000);
                 };
             } else if (square === "SQ8") {
                 if (SQ8 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ8 = 1;
                     player = playerTwo;
-                    computerTurnEasy();
+                    setTimeout(computerTurnEasy, 1000);
                 };
             } else if (square === "SQ9") {
                 if (SQ9 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ9 = 1;
                     player = playerTwo;
-                    computerTurnEasy();
+                    setTimeout(computerTurnEasy, 1000);
                 };
             };
 
@@ -167,66 +167,83 @@ function onePlayerEasy(){
 function computerTurnEasy(){
     var randomChoice = Math.floor(Math.random() * ((9-1)+1) + 1);
     var square = "SQ" + randomChoice;
-    var squareClass = "." + square;
+    var squareID = "#" + square;
     console.log("Random is: " + square);
     if (square === "SQ1") {
         if (SQ1 === 0) {
-            $(squareClass).append('<h3>' + playerTwo + '</h3>');
+            $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ1 = -1;
             player = playerOne;
+        } else {
+            computerTurnEasy();
         };
     } else if (square === "SQ2") {
         if (SQ2 === 0) {
-            $(squareClass).append('<h3>' + playerTwo + '</h3>');
+            $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ2 = -1;
             player = playerOne;
+        } else {
+            computerTurnEasy();
         };
     } else if (square === "SQ3") {
         if (SQ3 === 0) {
-            $(squareClass).append('<h3>' + playerTwo + '</h3>');
+            $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ3 = -1;
             player = playerOne;
+        } else {
+            computerTurnEasy();
         };
     } else if (square === "SQ4") {
         if (SQ4 === 0) {
-            $(squareClass).append('<h3>' + playerTwo + '</h3>');
+            $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ4 = -1;
             player = playerOne;
+        } else {
+            computerTurnEasy();
         };
     } else if (square === "SQ5") {
         if (SQ5 === 0) {
-            $(squareClass).append('<h3>' + playerTwo + '</h3>');
+            $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ5 = -1;
             player = playerOne;
+        } else {
+            computerTurnEasy();
         };
     } else if (square === "SQ6") {
         if (SQ6 === 0) {
-            $(squareClass).append('<h3>' + playerTwo + '</h3>');
+            $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ6 = -1;
             player = playerOne;
+        } else {
+            computerTurnEasy();
         };
     } else if (square === "SQ7") {
         if (SQ7 === 0) {
-            $(squareClass).append('<h3>' + playerTwo + '</h3>');
+            $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ7 = -1;
             player = playerOne;
+        } else {
+            computerTurnEasy();
         };
     } else if (square === "SQ8") {
         if (SQ8 === 0) {
-            $(squareClass).append('<h3>' + playerTwo + '</h3>');
+            $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ8 = -1;
             player = playerOne;
+        } else {
+            computerTurnEasy();
         };
     } else if (square === "SQ9") {
         if (SQ9 === 0) {
-            $(squareClass).append('<h3>' + playerTwo + '</h3>');
+            $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ9 = -1;
             player = playerOne;
+        } else {
+            computerTurnEasy();
         };
     };
     checkWinner();
-    onePlayerEasy();
-}
+};
 
 function onePlayerHard(){
     $('.square').click(function(){
