@@ -2,10 +2,15 @@ body {
     background-image: url(../images/notebook_background.jpg);
 }
 
+button {
+    transition: all 0.3s ease 0s;
+}
+
 h1 {
     font-size: 60px;
     text-align: center;
     font-family: 'Shadows Into Light', cursive;
+    margin: 0;
 }
 
 h2 {
@@ -98,10 +103,14 @@ h3 {
     border-radius: 20px;
 }
 
+#startGame:hover {
+    background: rgb(135, 191, 216);
+}
+
 .board {
     width: 450px;
     height: 450px;
-    margin: 50px auto 50px auto;
+    margin: 25px auto 50px auto;
     display: none;
     text-align: center;
 }
@@ -130,6 +139,10 @@ h3 {
     display: none;
 }
 
+#continueButton:hover {
+    background: rgb(135, 191, 216);
+}
+
 #reset {
     position: absolute;
     width: 20%;
@@ -143,6 +156,10 @@ h3 {
     background-color: rgb(233, 97, 27);
     border-radius: 20px;
     display: none;
+}
+
+#reset:hover {
+    background: rgb(135, 191, 216);
 }
 
 .row {
@@ -161,54 +178,54 @@ h3 {
 }
 
 #SQ1 {
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 #SQ2 {
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
 }
 
 #SQ3 {
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
 }
 
 #SQ4 {
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 #SQ5 {
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
 }
 
 #SQ6 {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
 }
 
 #SQ7 {
-    border-top: 1px solid black;
-    border-right: 1px solid black;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
 }
 
 #SQ8 {
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
 }
 
 #SQ9 {
-    border-top: 1px solid black;
-    border-left: 1px solid black;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
 }
 
 .scores {
