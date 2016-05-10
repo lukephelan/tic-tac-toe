@@ -10,16 +10,19 @@ var numberOfPlayers = $('#players');
 var difficultyOption = $('.intelligence');
 var difficulty = $('#intelligenceSelection');
 var restrictRounds = $('#roundLimitSelection');
-var numberOfRounds = $('#numberOfRounds')
+var numberOfRounds = $('#numberOfRounds');
 var playerOneName = $('#playerOneName');
 var playerTwoName = $('#playerTwoName');
 var playerOneScore = $('#firstScore');
 var playerTwoScore = $('#secondScore');
+var roundDisplayCount = $('#roundDisplayCount');
 
 var roundCount = 0;
 
 var oneWins = 0;
 var twoWins = 0;
+
+// THESE ARE DUPLICATED VARIABLES!!!
 var oneWinsText = $('#firstScore');
 var twoWinsText = $('#secondScore');
 
@@ -67,6 +70,7 @@ restrictRounds.on("change", function(){
 
 startButton.on('click', function(event) {
     menuArea.css('display', 'none');
+    numberOfRounds.text("Round: " + roundCount);
     boardArea.css('display', 'block');
     scoreArea.css('display', 'inline-block');
     allRows.css('display', 'flex');
@@ -104,7 +108,6 @@ function onePlayerEasy(){
                 if (SQ1 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ1 = 1;
-                    roundCount += 1;
                     player = playerTwo;
                     playerOneScore.css({'border': 'none', 'animation': 'none'});
                     playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -113,7 +116,6 @@ function onePlayerEasy(){
                 if (SQ2 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ2 = 1;
-                    roundCount += 1;
                     player = playerTwo;
                     playerOneScore.css({'border': 'none', 'animation': 'none'});
                     playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -122,7 +124,6 @@ function onePlayerEasy(){
                 if (SQ3 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ3 = 1;
-                    roundCount += 1;
                     player = playerTwo;
                     playerOneScore.css({'border': 'none', 'animation': 'none'});
                     playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -131,7 +132,6 @@ function onePlayerEasy(){
                 if (SQ4 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ4 = 1;
-                    roundCount += 1;
                     player = playerTwo;
                     playerOneScore.css({'border': 'none', 'animation': 'none'});
                     playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -140,7 +140,6 @@ function onePlayerEasy(){
                 if (SQ5 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ5 = 1;
-                    roundCount += 1;
                     player = playerTwo;
                     playerOneScore.css({'border': 'none', 'animation': 'none'});
                     playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -149,7 +148,6 @@ function onePlayerEasy(){
                 if (SQ6 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ6 = 1;
-                    roundCount += 1;
                     player = playerTwo;
                     playerOneScore.css({'border': 'none', 'animation': 'none'});
                     playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -158,7 +156,6 @@ function onePlayerEasy(){
                 if (SQ7 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ7 = 1;
-                    roundCount += 1;
                     player = playerTwo;
                     playerOneScore.css({'border': 'none', 'animation': 'none'});
                     playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -167,7 +164,6 @@ function onePlayerEasy(){
                 if (SQ8 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ8 = 1;
-                    roundCount += 1;
                     player = playerTwo;
                     playerOneScore.css({'border': 'none', 'animation': 'none'});
                     playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -176,7 +172,6 @@ function onePlayerEasy(){
                 if (SQ9 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ9 = 1;
-                    roundCount += 1;
                     player = playerTwo;
                     playerOneScore.css({'border': 'none', 'animation': 'none'});
                     playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -200,7 +195,6 @@ function computerTurnEasy(){
         if (SQ1 === 0) {
             $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ1 = -1;
-            roundCount += 1;
             player = playerOne;
             playerTwoScore.css({'border': 'none', 'animation': 'none'});
             playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -211,7 +205,6 @@ function computerTurnEasy(){
         if (SQ2 === 0) {
             $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ2 = -1;
-            roundCount += 1;
             player = playerOne;
             playerTwoScore.css({'border': 'none', 'animation': 'none'});
             playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -222,7 +215,6 @@ function computerTurnEasy(){
         if (SQ3 === 0) {
             $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ3 = -1;
-            roundCount += 1;
             player = playerOne;
             playerTwoScore.css({'border': 'none', 'animation': 'none'});
             playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -233,7 +225,6 @@ function computerTurnEasy(){
         if (SQ4 === 0) {
             $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ4 = -1;
-            roundCount += 1;
             player = playerOne;
             playerTwoScore.css({'border': 'none', 'animation': 'none'});
             playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -244,7 +235,6 @@ function computerTurnEasy(){
         if (SQ5 === 0) {
             $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ5 = -1;
-            roundCount += 1;
             player = playerOne;
             playerTwoScore.css({'border': 'none', 'animation': 'none'});
             playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -255,7 +245,6 @@ function computerTurnEasy(){
         if (SQ6 === 0) {
             $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ6 = -1;
-            roundCount += 1;
             player = playerOne;
             playerTwoScore.css({'border': 'none', 'animation': 'none'});
             playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -266,7 +255,6 @@ function computerTurnEasy(){
         if (SQ7 === 0) {
             $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ7 = -1;
-            roundCount += 1;
             player = playerOne;
             playerTwoScore.css({'border': 'none', 'animation': 'none'});
             playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -277,7 +265,6 @@ function computerTurnEasy(){
         if (SQ8 === 0) {
             $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ8 = -1;
-            roundCount += 1;
             player = playerOne;
             playerTwoScore.css({'border': 'none', 'animation': 'none'});
             playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -288,7 +275,6 @@ function computerTurnEasy(){
         if (SQ9 === 0) {
             $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ9 = -1;
-            roundCount += 1;
             player = playerOne;
             playerTwoScore.css({'border': 'none', 'animation': 'none'});
             playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -304,6 +290,7 @@ function checkWinnerEasy() {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
+        roundCount += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -312,6 +299,7 @@ function checkWinnerEasy() {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
+        roundCount += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -320,6 +308,7 @@ function checkWinnerEasy() {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
+        roundCount += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -328,6 +317,7 @@ function checkWinnerEasy() {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
+        roundCount += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -336,6 +326,7 @@ function checkWinnerEasy() {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
+        roundCount += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -344,6 +335,7 @@ function checkWinnerEasy() {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
+        roundCount += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -352,6 +344,7 @@ function checkWinnerEasy() {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
+        roundCount += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -360,6 +353,7 @@ function checkWinnerEasy() {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
+        roundCount += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -368,6 +362,7 @@ function checkWinnerEasy() {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
+        roundCount += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -376,6 +371,7 @@ function checkWinnerEasy() {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
+        roundCount += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -384,6 +380,7 @@ function checkWinnerEasy() {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
+        roundCount += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -392,6 +389,7 @@ function checkWinnerEasy() {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
+        roundCount += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -400,6 +398,7 @@ function checkWinnerEasy() {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
+        roundCount += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -408,6 +407,7 @@ function checkWinnerEasy() {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
+        roundCount += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -416,6 +416,7 @@ function checkWinnerEasy() {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
+        roundCount += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -424,6 +425,7 @@ function checkWinnerEasy() {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
+        roundCount += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -431,6 +433,7 @@ function checkWinnerEasy() {
     } else if (SQ1 != 0 && SQ2 != 0 && SQ3 != 0 && SQ4 != 0 && SQ5 != 0 && SQ6 != 0 && SQ7 != 0 && SQ8 != 0 && SQ9 != 0) {
         console.log("Game is a draw");
         declareWinner.text("Draw!");
+        roundCount += 1;
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
@@ -441,97 +444,82 @@ function checkWinnerEasy() {
 
 function onePlayerHard(){
     $('.square').click(function(){
-        // if (player === playerOne) {
-            var square = $(this).map(function(){ return this.id }).get().join(', ');
-            console.log(square);
-            if (square === "SQ1") {
-                if (SQ1 === 0) {
-                    $(this).append('<h3>' + playerOne + '</h3>');
-                    SQ1 = 1;
-                    roundCount += 1;
-                    player = playerTwo;
-                    playerOneScore.css({'border': 'none', 'animation': 'none'});
-                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
-                };
-            } else if (square === "SQ2") {
-                if (SQ2 === 0) {
-                    $(this).append('<h3>' + playerOne + '</h3>');
-                    SQ2 = 1;
-                    roundCount += 1;
-                    player = playerTwo;
-                    playerOneScore.css({'border': 'none', 'animation': 'none'});
-                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
-                };
-            } else if (square === "SQ3") {
-                if (SQ3 === 0) {
-                    $(this).append('<h3>' + playerOne + '</h3>');
-                    SQ3 = 1;
-                    roundCount += 1;
-                    player = playerTwo;
-                    playerOneScore.css({'border': 'none', 'animation': 'none'});
-                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
-                };
-            } else if (square === "SQ4") {
-                if (SQ4 === 0) {
-                    $(this).append('<h3>' + playerOne + '</h3>');
-                    SQ4 = 1;
-                    roundCount += 1;
-                    player = playerTwo;
-                    playerOneScore.css({'border': 'none', 'animation': 'none'});
-                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
-                };
-            } else if (square === "SQ5") {
-                if (SQ5 === 0) {
-                    $(this).append('<h3>' + playerOne + '</h3>');
-                    SQ5 = 1;
-                    roundCount += 1;
-                    player = playerTwo;
-                    playerOneScore.css({'border': 'none', 'animation': 'none'});
-                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
-                };
-            } else if (square === "SQ6") {
-                if (SQ6 === 0) {
-                    $(this).append('<h3>' + playerOne + '</h3>');
-                    SQ6 = 1;
-                    roundCount += 1;
-                    player = playerTwo;
-                    playerOneScore.css({'border': 'none', 'animation': 'none'});
-                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
-                };
-            } else if (square === "SQ7") {
-                if (SQ7 === 0) {
-                    $(this).append('<h3>' + playerOne + '</h3>');
-                    SQ7 = 1;
-                    roundCount += 1;
-                    player = playerTwo;
-                    playerOneScore.css({'border': 'none', 'animation': 'none'});
-                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
-                };
-            } else if (square === "SQ8") {
-                if (SQ8 === 0) {
-                    $(this).append('<h3>' + playerOne + '</h3>');
-                    SQ8 = 1;
-                    roundCount += 1;
-                    player = playerTwo;
-                    playerOneScore.css({'border': 'none', 'animation': 'none'});
-                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
-                };
-            } else if (square === "SQ9") {
-                if (SQ9 === 0) {
-                    $(this).append('<h3>' + playerOne + '</h3>');
-                    SQ9 = 1;
-                    roundCount += 1;
-                    player = playerTwo;
-                    playerOneScore.css({'border': 'none', 'animation': 'none'});
-                    playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
-                };
+        var square = $(this).map(function(){ return this.id }).get().join(', ');
+        console.log(square);
+        if (square === "SQ1") {
+            if (SQ1 === 0) {
+                $(this).append('<h3>' + playerOne + '</h3>');
+                SQ1 = 1;
+                player = playerTwo;
+                playerOneScore.css({'border': 'none', 'animation': 'none'});
+                playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
             };
-            // setTimeout(computerTurnEasy, 1000);
-            checkWinnerHard();
-
-        // } else if (player === playerTwo) {
-        //     setTimeout(computerTurnEasy, 1000);
-        // };
+        } else if (square === "SQ2") {
+            if (SQ2 === 0) {
+                $(this).append('<h3>' + playerOne + '</h3>');
+                SQ2 = 1;
+                player = playerTwo;
+                playerOneScore.css({'border': 'none', 'animation': 'none'});
+                playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
+            };
+        } else if (square === "SQ3") {
+            if (SQ3 === 0) {
+                $(this).append('<h3>' + playerOne + '</h3>');
+                SQ3 = 1;
+                player = playerTwo;
+                playerOneScore.css({'border': 'none', 'animation': 'none'});
+                playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
+            };
+        } else if (square === "SQ4") {
+            if (SQ4 === 0) {
+                $(this).append('<h3>' + playerOne + '</h3>');
+                SQ4 = 1;
+                player = playerTwo;
+                playerOneScore.css({'border': 'none', 'animation': 'none'});
+                playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
+            };
+        } else if (square === "SQ5") {
+            if (SQ5 === 0) {
+                $(this).append('<h3>' + playerOne + '</h3>');
+                SQ5 = 1;
+                player = playerTwo;
+                playerOneScore.css({'border': 'none', 'animation': 'none'});
+                playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
+            };
+        } else if (square === "SQ6") {
+            if (SQ6 === 0) {
+                $(this).append('<h3>' + playerOne + '</h3>');
+                SQ6 = 1;
+                player = playerTwo;
+                playerOneScore.css({'border': 'none', 'animation': 'none'});
+                playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
+            };
+        } else if (square === "SQ7") {
+            if (SQ7 === 0) {
+                $(this).append('<h3>' + playerOne + '</h3>');
+                SQ7 = 1;
+                player = playerTwo;
+                playerOneScore.css({'border': 'none', 'animation': 'none'});
+                playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
+            };
+        } else if (square === "SQ8") {
+            if (SQ8 === 0) {
+                $(this).append('<h3>' + playerOne + '</h3>');
+                SQ8 = 1;
+                player = playerTwo;
+                playerOneScore.css({'border': 'none', 'animation': 'none'});
+                playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
+            };
+        } else if (square === "SQ9") {
+            if (SQ9 === 0) {
+                $(this).append('<h3>' + playerOne + '</h3>');
+                SQ9 = 1;
+                player = playerTwo;
+                playerOneScore.css({'border': 'none', 'animation': 'none'});
+                playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
+            };
+        };
+        checkWinnerHard();
     });
 };
 
@@ -544,7 +532,6 @@ function computerTurnHard(){
         if (SQ1 === 0) {
             $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ1 = -1;
-            roundCount += 1;
             player = playerOne;
             playerTwoScore.css({'border': 'none', 'animation': 'none'});
             playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -555,7 +542,6 @@ function computerTurnHard(){
         if (SQ2 === 0) {
             $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ2 = -1;
-            roundCount += 1;
             player = playerOne;
             playerTwoScore.css({'border': 'none', 'animation': 'none'});
             playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -566,7 +552,6 @@ function computerTurnHard(){
         if (SQ3 === 0) {
             $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ3 = -1;
-            roundCount += 1;
             player = playerOne;
             playerTwoScore.css({'border': 'none', 'animation': 'none'});
             playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -577,7 +562,6 @@ function computerTurnHard(){
         if (SQ4 === 0) {
             $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ4 = -1;
-            roundCount += 1;
             player = playerOne;
             playerTwoScore.css({'border': 'none', 'animation': 'none'});
             playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -588,7 +572,6 @@ function computerTurnHard(){
         if (SQ5 === 0) {
             $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ5 = -1;
-            roundCount += 1;
             player = playerOne;
             playerTwoScore.css({'border': 'none', 'animation': 'none'});
             playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -599,7 +582,6 @@ function computerTurnHard(){
         if (SQ6 === 0) {
             $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ6 = -1;
-            roundCount += 1;
             player = playerOne;
             playerTwoScore.css({'border': 'none', 'animation': 'none'});
             playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -610,7 +592,6 @@ function computerTurnHard(){
         if (SQ7 === 0) {
             $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ7 = -1;
-            roundCount += 1;
             player = playerOne;
             playerTwoScore.css({'border': 'none', 'animation': 'none'});
             playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -621,7 +602,6 @@ function computerTurnHard(){
         if (SQ8 === 0) {
             $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ8 = -1;
-            roundCount += 1;
             player = playerOne;
             playerTwoScore.css({'border': 'none', 'animation': 'none'});
             playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -632,7 +612,6 @@ function computerTurnHard(){
         if (SQ9 === 0) {
             $(squareID).append('<h3>' + playerTwo + '</h3>');
             SQ9 = -1;
-            roundCount += 1;
             player = playerOne;
             playerTwoScore.css({'border': 'none', 'animation': 'none'});
             playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -648,6 +627,7 @@ function checkWinnerHard() {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
+        round += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -656,6 +636,7 @@ function checkWinnerHard() {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
+        round += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -664,6 +645,7 @@ function checkWinnerHard() {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
+        round += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -672,6 +654,7 @@ function checkWinnerHard() {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
+        round += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -680,6 +663,7 @@ function checkWinnerHard() {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
+        round += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -688,6 +672,7 @@ function checkWinnerHard() {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
+        round += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -696,6 +681,7 @@ function checkWinnerHard() {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
+        round += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -704,6 +690,7 @@ function checkWinnerHard() {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
+        round += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -712,6 +699,7 @@ function checkWinnerHard() {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
+        round += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -720,6 +708,7 @@ function checkWinnerHard() {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
+        round += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -728,6 +717,7 @@ function checkWinnerHard() {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
+        round += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -736,6 +726,7 @@ function checkWinnerHard() {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
+        round += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -744,6 +735,7 @@ function checkWinnerHard() {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
+        round += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -752,6 +744,7 @@ function checkWinnerHard() {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
+        round += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -760,6 +753,7 @@ function checkWinnerHard() {
         console.log("Player One wins!");
         declareWinner.text(playerOneNameText + " Wins!");
         oneWins += 1;
+        round += 1;
         oneWinsText.text(playerOneNameText + ": " + oneWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -768,6 +762,7 @@ function checkWinnerHard() {
         console.log("Player Two wins!");
         declareWinner.text(playerTwoNameText + " Wins!");
         twoWins += 1;
+        round += 1;
         twoWinsText.text(playerTwoNameText + ": " + twoWins);
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
@@ -775,6 +770,7 @@ function checkWinnerHard() {
     } else if (SQ1 != 0 && SQ2 != 0 && SQ3 != 0 && SQ4 != 0 && SQ5 != 0 && SQ6 != 0 && SQ7 != 0 && SQ8 != 0 && SQ9 != 0) {
         console.log("Game is a draw");
         declareWinner.text("Draw!");
+        round += 1;
         playerOneScore.css({'border': 'none', 'animation': 'none'});
         playerTwoScore.css({'border': 'none', 'animation': 'none'});
         setTimeout(clearScreen, 2000);
@@ -792,7 +788,6 @@ function twoPlayer(){
                 if (SQ1 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ1 = 1;
-                    roundCount += 1;
                     player = playerTwo;
                     playerOneScore.css({'border': 'none', 'animation': 'none'});
                     playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -801,7 +796,6 @@ function twoPlayer(){
                 if (SQ2 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ2 = 1;
-                    roundCount += 1;
                     player = playerTwo;
                     playerOneScore.css({'border': 'none', 'animation': 'none'});
                     playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -810,7 +804,6 @@ function twoPlayer(){
                 if (SQ3 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ3 = 1;
-                    roundCount += 1;
                     player = playerTwo;
                     playerOneScore.css({'border': 'none', 'animation': 'none'});
                     playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -819,7 +812,6 @@ function twoPlayer(){
                 if (SQ4 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ4 = 1;
-                    roundCount += 1;
                     player = playerTwo;
                     playerOneScore.css({'border': 'none', 'animation': 'none'});
                     playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -828,7 +820,6 @@ function twoPlayer(){
                 if (SQ5 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ5 = 1;
-                    roundCount += 1;
                     player = playerTwo;
                     playerOneScore.css({'border': 'none', 'animation': 'none'});
                     playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -837,7 +828,6 @@ function twoPlayer(){
                 if (SQ6 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ6 = 1;
-                    roundCount += 1;
                     player = playerTwo;
                     playerOneScore.css({'border': 'none', 'animation': 'none'});
                     playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -846,7 +836,6 @@ function twoPlayer(){
                 if (SQ7 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ7 = 1;
-                    roundCount += 1;
                     player = playerTwo;
                     playerOneScore.css({'border': 'none', 'animation': 'none'});
                     playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -855,7 +844,6 @@ function twoPlayer(){
                 if (SQ8 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ8 = 1;
-                    roundCount += 1;
                     player = playerTwo;
                     playerOneScore.css({'border': 'none', 'animation': 'none'});
                     playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -864,7 +852,6 @@ function twoPlayer(){
                 if (SQ9 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
                     SQ9 = 1;
-                    roundCount += 1;
                     player = playerTwo;
                     playerOneScore.css({'border': 'none', 'animation': 'none'});
                     playerTwoScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -882,7 +869,6 @@ function twoPlayer(){
                 if (SQ1 === 0) {
                     $(this).append('<h3>' + playerTwo + '</h3>');
                     SQ1 = -1;
-                    roundCount += 1;
                     player = playerOne;
                     playerTwoScore.css({'border': 'none', 'animation': 'none'});
                     playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -891,7 +877,6 @@ function twoPlayer(){
                 if (SQ2 === 0) {
                     $(this).append('<h3>' + playerTwo + '</h3>');
                     SQ2 = -1;
-                    roundCount += 1;
                     player = playerOne;
                     playerTwoScore.css({'border': 'none', 'animation': 'none'});
                     playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -900,7 +885,6 @@ function twoPlayer(){
                 if (SQ3 === 0) {
                     $(this).append('<h3>' + playerTwo + '</h3>');
                     SQ3 = -1;
-                    roundCount += 1;
                     player = playerOne;
                     playerTwoScore.css({'border': 'none', 'animation': 'none'});
                     playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -909,7 +893,6 @@ function twoPlayer(){
                 if (SQ4 === 0) {
                     $(this).append('<h3>' + playerTwo + '</h3>');
                     SQ4 = -1;
-                    roundCount += 1;
                     player = playerOne;
                     playerTwoScore.css({'border': 'none', 'animation': 'none'});
                     playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -918,7 +901,6 @@ function twoPlayer(){
                 if (SQ5 === 0) {
                     $(this).append('<h3>' + playerTwo + '</h3>');
                     SQ5 = -1;
-                    roundCount += 1;
                     player = playerOne;
                     playerTwoScore.css({'border': 'none', 'animation': 'none'});
                     playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -927,7 +909,6 @@ function twoPlayer(){
                 if (SQ6 === 0) {
                     $(this).append('<h3>' + playerTwo + '</h3>');
                     SQ6 = -1;
-                    roundCount += 1;
                     player = playerOne;
                     playerTwoScore.css({'border': 'none', 'animation': 'none'});
                     playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -936,7 +917,6 @@ function twoPlayer(){
                 if (SQ7 === 0) {
                     $(this).append('<h3>' + playerTwo + '</h3>');
                     SQ7 = -1;
-                    roundCount += 1;
                     player = playerOne;
                     playerTwoScore.css({'border': 'none', 'animation': 'none'});
                     playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -945,7 +925,6 @@ function twoPlayer(){
                 if (SQ8 === 0) {
                     $(this).append('<h3>' + playerTwo + '</h3>');
                     SQ8 = -1;
-                    roundCount += 1;
                     player = playerOne;
                     playerTwoScore.css({'border': 'none', 'animation': 'none'});
                     playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -954,7 +933,6 @@ function twoPlayer(){
                 if (SQ9 === 0) {
                     $(this).append('<h3>' + playerTwo + '</h3>');
                     SQ9 = -1;
-                    roundCount += 1;
                     player = playerOne;
                     playerTwoScore.css({'border': 'none', 'animation': 'none'});
                     playerOneScore.css({'border': 'solid rgb(247, 54, 54)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite'});
@@ -1136,6 +1114,7 @@ continueButton.on('click', function(event){
     continueButton.css('display', 'none');
     resetButton.css('display', 'none');
     scoreArea.css('display', 'inline-block');
+    numberOfRounds.text("Round: " + roundCount);
     oneWinsText.text(playerOneNameText + ": " + oneWins);
     twoWinsText.text(playerTwoNameText + ": " + twoWins);
 });

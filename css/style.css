@@ -18,6 +18,7 @@ h2 {
     margin: 0;
     padding: 0;
     font-family: 'Shadows Into Light', cursive;
+    display: inline-block;
 }
 
 h3 {
