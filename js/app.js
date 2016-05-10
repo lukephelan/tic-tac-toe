@@ -18,6 +18,7 @@ var playerTwoScore = $('#secondScore');
 var roundDisplayCount = $('#roundCountDisplay');
 
 var roundCount = 0;
+var maxRounds;
 
 var oneWins = 0;
 var twoWins = 0;
@@ -89,6 +90,8 @@ startButton.on('click', function(event) {
     };
     oneWinsText.text(playerOneNameText + ": " + oneWins);
     twoWinsText.text(playerTwoNameText + ": " + twoWins);
+    maxRounds = $('#numberOfRounds input').val();
+    console.log("Round Limit: " + maxRounds);
     if (x === 0 && y === 0) {
         onePlayerEasy();
     } else if (x === 0 && y === 1) {
