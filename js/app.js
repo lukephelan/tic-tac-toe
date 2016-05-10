@@ -15,7 +15,7 @@ var playerOneName = $('#playerOneName');
 var playerTwoName = $('#playerTwoName');
 var playerOneScore = $('#firstScore');
 var playerTwoScore = $('#secondScore');
-var roundDisplayCount = $('#roundDisplayCount');
+var roundDisplayCount = $('#roundCountDisplay');
 
 var roundCount = 0;
 
@@ -70,7 +70,7 @@ restrictRounds.on("change", function(){
 
 startButton.on('click', function(event) {
     menuArea.css('display', 'none');
-    numberOfRounds.text("Round: " + roundCount);
+    roundDisplayCount.text("Round: " + roundCount);
     boardArea.css('display', 'block');
     scoreArea.css('display', 'inline-block');
     allRows.css('display', 'flex');
@@ -1114,7 +1114,8 @@ continueButton.on('click', function(event){
     continueButton.css('display', 'none');
     resetButton.css('display', 'none');
     scoreArea.css('display', 'inline-block');
-    numberOfRounds.text("Round: " + roundCount);
+    roundDisplayCount.text("Round: " + roundCount);
+    console.log("Rounds: " + roundDisplayCount);
     oneWinsText.text(playerOneNameText + ": " + oneWins);
     twoWinsText.text(playerTwoNameText + ": " + twoWins);
 });
