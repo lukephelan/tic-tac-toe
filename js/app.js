@@ -65,7 +65,13 @@ startButton.on('click', function(event) {
     scoreArea.css('display', 'inline-block');
     allRows.css('display', 'flex');
     playerOneNameText = $('#playerOneName input').val();
-    playerTwoNameText = $('#playerTwoName input').val();
+    var x = numberOfPlayers.prop('selectedIndex');
+    console.log(x);
+    if (x === 0) {
+        playerTwoNameText = $('#playerTwoName input').val("Computer");
+    } else if (x === 1) {
+        playerTwoNameText = $('#playerTwoName input').val();
+    };
     oneWinsText.text(playerOneNameText + ": " + oneWins);
     twoWinsText.text(playerTwoNameText + ": " + twoWins);
 });
