@@ -58,10 +58,15 @@ restrictRounds.on("change", function(){
 });
 
 startButton.on('click', function(event) {
+    menuArea.css('display', 'none');
     boardArea.css('display', 'block');
     scoreArea.css('display', 'inline-block');
-    menuArea.css('display', 'none');
+    allRows.css('display', 'flex');
+    oneWinsText.text('Player 1: ' + oneWins);
+    twoWinsText.text('Player 2: ' + twoWins);
 });
+
+
 
 $('.square').click(function(){
     if (player === playerOne) {
@@ -362,12 +367,10 @@ resetButton.on('click', function(event){
     SQ9 = 0;
     oneWins = 0;
     twoWins = 0;
-    // allRows.css('display', 'flex');
-    // declareWinner.text("");
     continueButton.css('display', 'none')
     resetButton.css('display', 'none');
-    // oneWinsText.text('Player 1: ' + oneWins);
-    // twoWinsText.text('Player 2: ' + twoWins);
-    menuArea.css('display', 'block');
+    boardArea.css('display', 'none');
     declareWinner.css('display', 'none');
+    scoreArea.css('display', 'none');
+    menuArea.css('display', 'block');
 });
