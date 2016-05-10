@@ -7,6 +7,8 @@ var menuArea = $('.menu');
 var allRows = $('.row');
 var declareWinner = $('#declareWinner');
 var numberOfPlayers = $('#players');
+var difficultyOption = $('.intelligence');
+var difficulty = $('#intelligenceSelection');
 var restrictRounds = $('#roundLimitSelection');
 var numberOfRounds = $('#numberOfRounds')
 var playerOneName = $('#playerOneName');
@@ -42,11 +44,13 @@ numberOfPlayers.on("change", function(){
     if (x === 0) {
         playerOneName.css('display', 'block');
         playerTwoName.css('display', 'none');
+        difficultyOption.css('display', 'block');
         console.log("One Player");
     } else if (x === 1) {
         console.log("Two Players");
         playerOneName.css('display', 'block');
         playerTwoName.css('display', 'block');
+        difficultyOption.css('display', 'none');
     };
 });
 
@@ -69,6 +73,7 @@ startButton.on('click', function(event) {
     // Set player ones name to the input value
     playerOneNameText = $('#playerOneName input').val();
     var x = numberOfPlayers.prop('selectedIndex');
+    var y = difficulty.prop('selectedIndex');
     // Set player two's name to the input value, or set as "Computer"
     // if only single player game
     if (x === 0) {
@@ -78,8 +83,10 @@ startButton.on('click', function(event) {
     };
     oneWinsText.text(playerOneNameText + ": " + oneWins);
     twoWinsText.text(playerTwoNameText + ": " + twoWins);
-    if (x === 0) {
+    if (x === 0 && y === 0) {
         onePlayerEasy();
+    } else if (x === 0 && y === 1) {
+        onePlayerHard();
     } else if (x === 1) {
         twoPlayer();
     };
@@ -745,8 +752,6 @@ function twoPlayer(){
         };
     });
 };
-
-
 
 
 // Check if player has three in-line
