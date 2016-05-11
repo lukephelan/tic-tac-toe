@@ -72,7 +72,7 @@ startButton.on('click', function(event) {
     scoreArea.css('display', 'inline-block');
     allRows.css('display', 'flex');
     declareWinner.text("");
-    declareWinner.css("display", "inline-block");
+    // declareWinner.css("display", "inline-block");
     // Set player ones name to the input value
     playerOneNameText = $('#playerOneName input').val();
     var x = numberOfPlayers.prop('selectedIndex');
@@ -740,7 +740,7 @@ function clearScreen(){
     continueButton.css('display', 'inline-block');
     resetButton.css('display', 'inline-block');
     declareWinner.text("");
-    declareWinner.css("display", "none");
+    // declareWinner.css("display", "none");
     scoreArea.css('display', 'none');
 };
 
@@ -760,7 +760,7 @@ continueButton.on('click', function(event){
     SQ9 = 0;
     allRows.css('display', 'flex');
     declareWinner.text("");
-    declareWinner.css("display", "inline-block");
+    // declareWinner.css("display", "inline-block");
     continueButton.css('display', 'none');
     resetButton.css('display', 'none');
     scoreArea.css('display', 'inline-block');
@@ -790,7 +790,7 @@ resetButton.on('click', function(event){
     continueButton.css('display', 'none')
     resetButton.css('display', 'none');
     boardArea.css('display', 'none');
-    declareWinner.css('display', 'none');
+    // declareWinner.css('display', 'none');
     scoreArea.css('display', 'none');
     menuArea.css('display', 'block');
 });
