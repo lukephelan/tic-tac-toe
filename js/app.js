@@ -27,7 +27,7 @@ var icon = ['X', 'O'];
 
 var playerOne = icon[0];
 var playerTwo = icon[1];
-var player = playerTwo;
+var player = playerOne;
 
 var SQ1 = 0;
 var SQ2 = 0;
@@ -77,6 +77,7 @@ restrictRounds.on("change", function(){
 });
 
 startButton.on('click', function(event) {
+    console.log(boardCondition);
     menuArea.css('display', 'none');
     roundDisplayCount.text("Round: " + roundCount);
     boardArea.css('display', 'block');
@@ -428,41 +429,14 @@ function onePlayerHard(){
 };
 
 function computerTurnHard(){
-    if (SQ1 === 0 && SQ2 === 0 && SQ3 === 0 && SQ4 === 0 && SQ5 === 0 &&
-        SQ6 === 0 && SQ7 === 0 && SQ8 === 0 && SQ9 === 0) {
-            console.log("I'm going first!");
-            $('#SQ5').append('<h3>' + playerTwo + '</h3>');
-    } else if (SQ1 === 0 && SQ2 === 1 && SQ3 === 0 && SQ4 === 0 && SQ5 === -1 &&
-        SQ6 === 0 && SQ7 === 0 && SQ8 === 0 && SQ9 === 0) {
-            $('#SQ7').append('<h3>' + playerTwo + '</h3>');
-    } else if ((SQ1 === 0 && SQ2 === 0 && SQ3 === 0 && SQ4 === 1 && SQ5 === -1 &&
-        SQ6 === 0 && SQ7 === 0 && SQ8 === 0 && SQ9 === 0) {
-            $('#SQ9').append('<h3>' + playerTwo + '</h3>');
-    } else if ((SQ1 === 0 && SQ2 === 0 && SQ3 === 0 && SQ4 === 0 && SQ5 === -1 &&
-        SQ6 === 1 && SQ7 === 0 && SQ8 === 0 && SQ9 === 0) {
-            $('#SQ1').append('<h3>' + playerTwo + '</h3>');
-    } else if ((SQ1 === 0 && SQ2 === 0 && SQ3 === 0 && SQ4 === 0 && SQ5 === -1 &&
-        SQ6 === 0 && SQ7 === 0 && SQ8 === 1 && SQ9 === 0) {
-            $('#SQ3').append('<h3>' + playerTwo + '</h3>');
-    } else if ((SQ1 === 1 && SQ2 === 0 && SQ3 === 0 && SQ4 === 0 && SQ5 === -1 &&
-        SQ6 === 0 && SQ7 === 0 && SQ8 === 0 && SQ9 === 0) {
-            $('#SQ9').append('<h3>' + playerTwo + '</h3>');
-    } else if ((SQ1 === 0 && SQ2 === 0 && SQ3 === 1 && SQ4 === 0 && SQ5 === -1 &&
-        SQ6 === 0 && SQ7 === 1 && SQ8 === 0 && SQ9 === 0) {
-            $('#SQ7').append('<h3>' + playerTwo + '</h3>');
-    } else if ((SQ1 === 0 && SQ2 === 0 && SQ3 === 0 && SQ4 === 0 && SQ5 === -1 &&
-        SQ6 === 0 && SQ7 === 1 && SQ8 === 0 && SQ9 === 0) {
-            $('#SQ3').append('<h3>' + playerTwo + '</h3>');
-    } else if ((SQ1 === 0 && SQ2 === 0 && SQ3 === 0 && SQ4 === 0 && SQ5 === -1 &&
-        SQ6 === 0 && SQ7 === 0 && SQ8 === 0 && SQ9 === 1) {
-            $('#SQ1').append('<h3>' + playerTwo + '</h3>');
-    // checkWinnerHard();
-};
+    if (SQ1 === 0 && (SQ2 === -1 && SQ3 === -1) {
+        $('#SQ1').append('<h3>' + playerTwo + '</h3>');
+    }
 
 
 
 
-
+//
 //     var randomChoice = Math.floor(Math.random() * ((9-1)+1) + 1);
 //     var square = "SQ" + randomChoice;
 //     var squareID = "#" + square;
