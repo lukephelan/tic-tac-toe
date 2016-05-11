@@ -23,10 +23,6 @@ var maxRounds;
 var oneWins = 0;
 var twoWins = 0;
 
-// THESE ARE DUPLICATED VARIABLES!!!
-var oneWinsText = $('#firstScore');
-var twoWinsText = $('#secondScore');
-
 var icon = ['X', 'O'];
 
 var playerOne = icon[0];
@@ -88,8 +84,8 @@ startButton.on('click', function(event) {
     } else if (x === 1) {
         playerTwoNameText = $('#playerTwoName input').val();
     };
-    oneWinsText.text(playerOneNameText + ": " + oneWins);
-    twoWinsText.text(playerTwoNameText + ": " + twoWins);
+    playerOneScore.text(playerOneNameText + ": " + oneWins);
+    playerTwoScore.text(playerTwoNameText + ": " + twoWins);
     maxRounds = $('#numberOfRounds input').val();
     console.log("Round Limit: " + maxRounds);
     if (x === 0 && y === 0) {
@@ -291,7 +287,7 @@ function playerOneWins(){
     declareWinner.text(playerOneNameText + " Wins!");
     oneWins += 1;
     roundCount += 1;
-    oneWinsText.text(playerOneNameText + ": " + oneWins);
+    playerOneScore.text(playerOneNameText + ": " + oneWins);
     playerOneScore.css({'border': 'none', 'animation': 'none'});
     playerTwoScore.css({'border': 'none', 'animation': 'none'});
     setTimeout(clearScreen, 2000);
@@ -302,7 +298,7 @@ function playerTwoWins(){
     declareWinner.text(playerTwoNameText + " Wins!");
     twoWins += 1;
     roundCount += 1;
-    twoWinsText.text(playerTwoNameText + ": " + twoWins);
+    playerTwoScore.text(playerTwoNameText + ": " + twoWins);
     playerOneScore.css({'border': 'none', 'animation': 'none'});
     playerTwoScore.css({'border': 'none', 'animation': 'none'});
     setTimeout(clearScreen, 2000);
@@ -770,8 +766,8 @@ continueButton.on('click', function(event){
     scoreArea.css('display', 'inline-block');
     roundDisplayCount.text("Round: " + roundCount);
     console.log("Rounds: " + roundCount);
-    oneWinsText.text(playerOneNameText + ": " + oneWins);
-    twoWinsText.text(playerTwoNameText + ": " + twoWins);
+    playerOneScore.text(playerOneNameText + ": " + oneWins);
+    playerTwoScore.text(playerTwoNameText + ": " + twoWins);
 });
 
 resetButton.on('click', function(event){
