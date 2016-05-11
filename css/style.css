@@ -261,6 +261,7 @@ h3 {
     border: solid rgb(247, 54, 54);
     border-radius: 10px;
     animation: blinker 1s linear infinite;
+    background-color: white;
 }
 
 #secondScore {
