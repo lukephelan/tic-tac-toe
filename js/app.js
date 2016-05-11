@@ -769,7 +769,7 @@ continueButton.on('click', function(event){
     resetButton.css('display', 'none');
     scoreArea.css('display', 'inline-block');
     roundDisplayCount.text("Round: " + roundCount);
-    console.log("Rounds: " + roundDisplayCount);
+    console.log("Rounds: " + roundCount);
     oneWinsText.text(playerOneNameText + ": " + oneWins);
     twoWinsText.text(playerTwoNameText + ": " + twoWins);
 });
