@@ -429,11 +429,121 @@ function onePlayerHard(){
 };
 
 function computerTurnHard(){
-    if (SQ1 === 0 && (SQ2 === -1 && SQ3 === -1) {
+    // Check if computer has two in a line and can win
+    // Check top row
+    if (SQ1 === 0 && (SQ2 === -1 && SQ3 === -1)) {
         $('#SQ1').append('<h3>' + playerTwo + '</h3>');
-    }
-
-
+    } else if (SQ2 === 0 && (SQ1 === -1 && SQ3 === -1)) {
+        $('SQ2').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ3 === 0 && (SQ1 === -1 && SQ2 === -1)) {
+        $('SQ3').append('<h3>' + playerTwo + '<h/h3>');
+    // Check middle row
+    } else if (SQ4 === 0 && (SQ5 === -1 && SQ6 === -1)) {
+        $('SQ4').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ5 === 0 && (SQ4 === -1 && SQ6 === -1)) {
+        $('SQ5').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ6 === 0 && (SQ4 === -1 && SQ5 === -1)) {
+        $('SQ6').append('<h3>' + playerTwo + '<h/h3>');
+    // Check bottom row
+    } else if (SQ7 === 0 && (SQ8 === -1 && SQ9 === -1)) {
+        $('SQ7').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ8 === 0 && (SQ7 === -1 && SQ9 === -1)) {
+        $('SQ8').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ9 === 0 && (SQ7 === -1 && SQ8 === -1)) {
+        $('SQ9').append('<h3>' + playerTwo + '<h/h3>');
+    // Check left column
+    } else if (SQ1 === 0 && (SQ4 === -1 && SQ7 === -1)) {
+        $('SQ1').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ4 === 0 && (SQ1 === -1 && SQ7 === -1)) {
+        $('SQ4').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ7 === 0 && (SQ1 === -1 && SQ4 === -1)) {
+        $('SQ7').append('<h3>' + playerTwo + '<h/h3>');
+    // Check middle column
+    } else if (SQ2 === 0 && (SQ5 === -1 && SQ8 === -1)) {
+        $('SQ2').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ5 === 0 && (SQ2 === -1 && SQ8 === -1)) {
+        $('SQ5').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ8 === 0 && (SQ2 === -1 && SQ5 === -1)) {
+        $('SQ8').append('<h3>' + playerTwo + '<h/h3>');
+    // Check right column
+    } else if (SQ3 === 0 && (SQ6 === -1 && SQ9 === -1)) {
+        $('SQ3').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ6 === 0 && (SQ3 === -1 && SQ9 === -1)) {
+        $('SQ6').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ9 === 0 && (SQ3 === -1 && SQ6 === -1)) {
+        $('SQ9').append('<h3>' + playerTwo + '<h/h3>');
+    // Check first diagonal
+    } else if (SQ1 === 0 && (SQ5 === -1 && SQ9 === -1)) {
+        $('SQ1').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ5 === 0 && (SQ1 === -1 && SQ9 === -1)) {
+        $('SQ5').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ9 === 0 && (SQ1 === -1 && SQ5 === -1)) {
+        $('SQ9').append('<h3>' + playerTwo + '<h/h3>');
+    // Check second diagonal
+    } else if (SQ3 === 0 && (SQ5 === -1 && SQ7 === -1)) {
+        $('SQ3').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ5 === 0 && (SQ3 === -1 && SQ7 === -1)) {
+        $('SQ5').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ7 === 0 && (SQ3 === -1 && SQ5 === -1)) {
+        $('SQ7').append('<h3>' + playerTwo + '<h/h3>');
+    // Check if player has two in a line for computer to block
+    // Check top row
+    if (SQ1 === 0 && (SQ2 === 1 && SQ3 === 1)) {
+        $('#SQ1').append('<h3>' + playerTwo + '</h3>');
+    } else if (SQ2 === 0 && (SQ1 === 1 && SQ3 === 1)) {
+        $('SQ2').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ3 === 0 && (SQ1 === 1 && SQ2 === 1)) {
+        $('SQ3').append('<h3>' + playerTwo + '<h/h3>');
+    // Check middle row
+    } else if (SQ4 === 0 && (SQ5 === 1 && SQ6 === 1)) {
+        $('SQ4').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ5 === 0 && (SQ4 === 1 && SQ6 === 1)) {
+        $('SQ5').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ6 === 0 && (SQ4 === 1 && SQ5 === 1)) {
+        $('SQ6').append('<h3>' + playerTwo + '<h/h3>');
+    // Check bottom row
+    } else if (SQ7 === 0 && (SQ8 === 1 && SQ9 === 1)) {
+        $('SQ7').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ8 === 0 && (SQ7 === 1 && SQ9 === 1)) {
+        $('SQ8').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ9 === 0 && (SQ7 === 1 && SQ8 === 1)) {
+        $('SQ9').append('<h3>' + playerTwo + '<h/h3>');
+    // Check left column
+    } else if (SQ1 === 0 && (SQ4 === 1 && SQ7 === 1)) {
+        $('SQ1').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ4 === 0 && (SQ1 === 1 && SQ7 === 1)) {
+        $('SQ4').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ7 === 0 && (SQ1 === 1 && SQ4 === 1)) {
+        $('SQ7').append('<h3>' + playerTwo + '<h/h3>');
+    // Check middle column
+    } else if (SQ2 === 0 && (SQ5 === 1 && SQ8 === 1)) {
+        $('SQ2').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ5 === 0 && (SQ2 === 1 && SQ8 === 1)) {
+        $('SQ5').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ8 === 0 && (SQ2 === 1 && SQ5 === 1)) {
+        $('SQ8').append('<h3>' + playerTwo + '<h/h3>');
+    // Check right column
+    } else if (SQ3 === 0 && (SQ6 === 1 && SQ9 === 1)) {
+        $('SQ3').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ6 === 0 && (SQ3 === 1 && SQ9 === 1)) {
+        $('SQ6').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ9 === 0 && (SQ3 === 1 && SQ6 === 1)) {
+        $('SQ9').append('<h3>' + playerTwo + '<h/h3>');
+    // Check first diagonal
+    } else if (SQ1 === 0 && (SQ5 === 1 && SQ9 === 1)) {
+        $('SQ1').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ5 === 0 && (SQ1 === 1 && SQ9 === 1)) {
+        $('SQ5').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ9 === 0 && (SQ1 === 1 && SQ5 === 1)) {
+        $('SQ9').append('<h3>' + playerTwo + '<h/h3>');
+    // Check second diagonal
+    } else if (SQ3 === 0 && (SQ5 === 1 && SQ7 === 1)) {
+        $('SQ3').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ5 === 0 && (SQ3 === 1 && SQ7 === 1)) {
+        $('SQ5').append('<h3>' + playerTwo + '<h/h3>');
+    } else if (SQ7 === 0 && (SQ3 === 1 && SQ5 === 1)) {
+        $('SQ7').append('<h3>' + playerTwo + '<h/h3>');
+    // 
 
 
 //
