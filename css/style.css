@@ -258,7 +258,7 @@ h3 {
     height: 50px;
     margin-right: 100px;
     text-align: center;
-    border: solid rgb(231, 175, 180);
+    border: solid rgb(255, 96, 110);
     border-radius: 10px;
     animation: blinker 1s linear infinite;
     background-color: rgb(222, 239, 239);
