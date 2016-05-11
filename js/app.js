@@ -41,6 +41,15 @@ var SQ9 = 0;
 
 var boardCondition = [SQ1, SQ2, SQ3, SQ4, SQ5, SQ6, SQ7, SQ8, SQ9];
 
+var rowOne = SQ1 + SQ2 + SQ3;
+var rowTwo = SQ4 + SQ5 + SQ6;
+var rowThree = SQ6 + SQ7 + SQ8;
+var columnOne = SQ1 + SQ4 + SQ7;
+var columnTwo = SQ2 + SQ5 + SQ8;
+var columnThree = SQ3 + SQ6 + SQ9;
+var diagOne = SQ1 + SQ5 + SQ9;
+var diagTwo = SQ3 + SQ5 + SQ7;
+
 
 numberOfPlayers.on("change", function(){
     var x = numberOfPlayers.prop('selectedIndex');
