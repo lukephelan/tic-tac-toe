@@ -39,6 +39,8 @@ var SQ7 = 0;
 var SQ8 = 0;
 var SQ9 = 0;
 
+var boardCondition = [SQ1, SQ2, SQ3, SQ4, SQ5, SQ6, SQ7, SQ8, SQ9];
+
 
 numberOfPlayers.on("change", function(){
     var x = numberOfPlayers.prop('selectedIndex');
