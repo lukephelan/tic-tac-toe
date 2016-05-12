@@ -9,8 +9,6 @@ var declareWinner = $('#declareWinner');
 var numberOfPlayers = $('#players');
 var difficultyOption = $('.intelligence');
 var difficulty = $('#intelligenceSelection');
-var restrictRounds = $('#roundLimitSelection');
-var numberOfRounds = $('#numberOfRounds');
 var playerOneName = $('#playerOneName');
 var playerTwoName = $('#playerTwoName');
 var playerOneScore = $('#firstScore');
@@ -29,6 +27,10 @@ var playerOne = icon[0];
 var playerTwo = icon[1];
 var player = playerOne;
 
+
+
+// var boardCondition = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+
 var SQ1 = 0;
 var SQ2 = 0;
 var SQ3 = 0;
@@ -39,16 +41,14 @@ var SQ7 = 0;
 var SQ8 = 0;
 var SQ9 = 0;
 
-var boardCondition = [SQ1, SQ2, SQ3, SQ4, SQ5, SQ6, SQ7, SQ8, SQ9];
-
-var rowOne = SQ1 + SQ2 + SQ3;
-var rowTwo = SQ4 + SQ5 + SQ6;
-var rowThree = SQ6 + SQ7 + SQ8;
-var columnOne = SQ1 + SQ4 + SQ7;
-var columnTwo = SQ2 + SQ5 + SQ8;
-var columnThree = SQ3 + SQ6 + SQ9;
-var diagOne = SQ1 + SQ5 + SQ9;
-var diagTwo = SQ3 + SQ5 + SQ7;
+// var rowOne = SQ1 + SQ2 + SQ3;
+// var rowTwo = SQ4 + SQ5 + SQ6;
+// var rowThree = SQ6 + SQ7 + SQ8;
+// var columnOne = SQ1 + SQ4 + SQ7;
+// var columnTwo = SQ2 + SQ5 + SQ8;
+// var columnThree = SQ3 + SQ6 + SQ9;
+// var diagOne = SQ1 + SQ5 + SQ9;
+// var diagTwo = SQ3 + SQ5 + SQ7;
 
 
 numberOfPlayers.on("change", function(){
@@ -67,14 +67,7 @@ numberOfPlayers.on("change", function(){
     };
 });
 
-restrictRounds.on("change", function(){
-    var y = restrictRounds.prop('selectedIndex');
-    if (y === 0) {
-        numberOfRounds.css('display', 'none');
-    } else if (y === 1) {
-        numberOfRounds.css('display', 'block');
-    };
-});
+
 
 startButton.on('click', function(event) {
     menuArea.css('display', 'none');
@@ -98,8 +91,6 @@ startButton.on('click', function(event) {
     playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     playerOneScore.text(playerOneNameText + ": " + oneWins);
     playerTwoScore.text(playerTwoNameText + ": " + twoWins);
-    maxRounds = $('#numberOfRounds input').val();
-    console.log("Round Limit: " + maxRounds);
     if (x === 0 && y === 0) {
         onePlayerEasy();
     } else if (x === 0 && y === 1) {
@@ -117,6 +108,20 @@ function onePlayerEasy(){
         } else {
             var square = $(this).map(function(){ return this.id }).get().join(', ');
             console.log(square);
+            // for (i = 0; i < boardCondition.length; i++) {
+            //     if (square === "SQ" + (i+1)) {
+            //         if (boardCondition[i] === 0) {
+            //             $(this).append('<h3>' + playerOne + '</h3>');
+            //             boardCondition[i] = 1;
+            //             console.log(boardCondition);
+            //             // console.log(SQ1);
+            //             // console.log("hey");
+            //             player = playerTwo;
+            //             playerOneScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
+            //             playerTwoScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
+            //         };
+            //     }
+            // }
             if (square === "SQ1") {
                 if (SQ1 === 0) {
                     $(this).append('<h3>' + playerOne + '</h3>');
@@ -201,152 +206,152 @@ function computerTurnEasy(){
     console.log("Ready to go");
     if (SQ1 === 0 && (SQ2 === -1 && SQ3 === -1)) {
         $('#SQ1').append('<h3>' + playerTwo + '</h3>');
-        SQ1 = -1;
+        SQ1 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     } else if (SQ2 === 0 && (SQ1 === -1 && SQ3 === -1)) {
         $('#SQ2').append('<h3>' + playerTwo + '</h3>');
-        SQ2 = -1;
+        SQ2 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     } else if (SQ3 === 0 && (SQ1 === -1 && SQ2 === -1)) {
         $('#SQ3').append('<h3>' + playerTwo + '</h3>');
-        SQ3 = -1;
+        SQ3 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     // Check middle row
     } else if (SQ4 === 0 && (SQ5 === -1 && SQ6 === -1)) {
         $('#SQ4').append('<h3>' + playerTwo + '</h3>');
-        SQ4 = -1;
+        SQ4 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     } else if (SQ5 === 0 && (SQ4 === -1 && SQ6 === -1)) {
         $('#SQ5').append('<h3>' + playerTwo + '</h3>');
-        SQ5 = -1;
+        SQ5 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     } else if (SQ6 === 0 && (SQ4 === -1 && SQ5 === -1)) {
         $('#SQ6').append('<h3>' + playerTwo + '</h3>');
-        SQ6 = -1;
+        SQ6 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     // Check bottom row
     } else if (SQ7 === 0 && (SQ8 === -1 && SQ9 === -1)) {
         $('#SQ7').append('<h3>' + playerTwo + '</h3>');
-        SQ7 = -1;
+        SQ7 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     } else if (SQ8 === 0 && (SQ7 === -1 && SQ9 === -1)) {
         $('#SQ8').append('<h3>' + playerTwo + '</h3>');
-        SQ8 = -1;
+        SQ8 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     } else if (SQ9 === 0 && (SQ7 === -1 && SQ8 === -1)) {
         $('#SQ9').append('<h3>' + playerTwo + '</h3>');
-        SQ9 = -1;
+        SQ9 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     // Check left column
     } else if (SQ1 === 0 && (SQ4 === -1 && SQ7 === -1)) {
         $('#SQ1').append('<h3>' + playerTwo + '</h3>');
-        SQ1 = -1;
+        SQ1 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     } else if (SQ4 === 0 && (SQ1 === -1 && SQ7 === -1)) {
         $('#SQ4').append('<h3>' + playerTwo + '</h3>');
-        SQ4 = -1;
+        SQ4 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     } else if (SQ7 === 0 && (SQ1 === -1 && SQ4 === -1)) {
         $('#SQ7').append('<h3>' + playerTwo + '</h3>');
-        SQ7 = -1;
+        SQ7 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     // Check middle column
     } else if (SQ2 === 0 && (SQ5 === -1 && SQ8 === -1)) {
         $('#SQ2').append('<h3>' + playerTwo + '</h3>');
-        SQ2 = -1;
+        SQ2 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     } else if (SQ5 === 0 && (SQ2 === -1 && SQ8 === -1)) {
         $('#SQ5').append('<h3>' + playerTwo + '</h3>');
-        SQ5 = -1;
+        SQ5 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     } else if (SQ8 === 0 && (SQ2 === -1 && SQ5 === -1)) {
         $('#SQ8').append('<h3>' + playerTwo + '</h3>');
-        SQ8 = -1;
+        SQ8 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     // Check right column
     } else if (SQ3 === 0 && (SQ6 === -1 && SQ9 === -1)) {
         $('#SQ3').append('<h3>' + playerTwo + '</h3>');
-        SQ3 = -1;
+        SQ3 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     } else if (SQ6 === 0 && (SQ3 === -1 && SQ9 === -1)) {
         $('#SQ6').append('<h3>' + playerTwo + '</h3>');
-        SQ6 = -1;
+        SQ6 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     } else if (SQ9 === 0 && (SQ3 === -1 && SQ6 === -1)) {
         $('#SQ9').append('<h3>' + playerTwo + '</h3>');
-        SQ9 = -1;
+        SQ9 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     // Check first diagonal
     } else if (SQ1 === 0 && (SQ5 === -1 && SQ9 === -1)) {
         $('#SQ1').append('<h3>' + playerTwo + '</h3>');
-        SQ1 = -1;
+        SQ1 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     } else if (SQ5 === 0 && (SQ1 === -1 && SQ9 === -1)) {
         $('#SQ5').append('<h3>' + playerTwo + '</h3>');
-        SQ5 = -1;
+        SQ5 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     } else if (SQ9 === 0 && (SQ1 === -1 && SQ5 === -1)) {
         $('#SQ9').append('<h3>' + playerTwo + '</h3>');
-        SQ9 = -1;
+        SQ9 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     // Check second diagonal
     } else if (SQ3 === 0 && (SQ5 === -1 && SQ7 === -1)) {
         $('#SQ3').append('<h3>' + playerTwo + '</h3>');
-        SQ3 = -1;
+        SQ3 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     } else if (SQ5 === 0 && (SQ3 === -1 && SQ7 === -1)) {
         $('#SQ5').append('<h3>' + playerTwo + '</h3>');
-        SQ5 = -1;
+        SQ5 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     } else if (SQ7 === 0 && (SQ3 === -1 && SQ5 === -1)) {
         $('#SQ7').append('<h3>' + playerTwo + '</h3>');
-        SQ7 = -1;
+        SQ7 = -1
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});

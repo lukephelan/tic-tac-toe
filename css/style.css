@@ -73,26 +73,6 @@ h3 {
     font-size: 30px;
 }
 
-#limitedRounds {
-    margin: 20px 0 0 0;
-}
-
-#roundLimitSelection {
-    font-size: 30px;
-}
-
-#numberOfRounds {
-    margin: 20px 0 0 0;
-    display: none;
-}
-
-.roundsChosen {
-    font-size: 30px;
-    width: 70px;
-    font-family: 'Shadows Into Light', cursive;
-    height: 30px;
-}
-
 #startGame {
     margin: 50px 0 0 0;
     width: 250px;
