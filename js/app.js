@@ -342,7 +342,6 @@ function checkWinnerEasy() {
 };
 
 function onePlayerHard(){
-    computerTurnHard();
     $('.square').click(function(){
         if (player === playerTwo) {
             return;
@@ -735,32 +734,85 @@ function computerTurnHard(){
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
-    // Check if user has a corner piece, if so, computer goes opposite
-    } else if (SQ1 === 1 && SQ9 === 0) {
-        $('#SQ9').append('<h3>' + playerTwo + '</h3>');
-        SQ9 = -1;
+    // Check if user has a corner square, if so, computer goes to middle square
+    } else if (SQ1 === 1 && SQ5 === 0) {
+        $('#SQ5').append('<h3>' + playerTwo + '</h3>');
+        SQ5 = -1;
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
-    } else if (SQ3 === 1 && SQ7 === 0) {
-        $('#SQ7').append('<h3>' + playerTwo + '</h3>');
-        SQ7 = -1;
+    } else if (SQ3 === 1 && SQ5 === 0) {
+        $('#SQ5').append('<h3>' + playerTwo + '</h3>');
+        SQ5 = -1;
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
-    } else if (SQ7 === 1 && SQ9 === 0) {
-        $('#SQ9').append('<h3>' + playerTwo + '</h3>');
-        SQ9 = -1;
+    } else if (SQ7 === 1 && SQ5 === 0) {
+        $('#SQ5').append('<h3>' + playerTwo + '</h3>');
+        SQ5 = -1;
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
-    } else if (SQ9 === 1 && SQ1 === 0) {
-        $('#SQ1').append('<h3>' + playerTwo + '</h3>');
-        SQ1 = -1;
+    } else if (SQ9 === 1 && SQ5 === 0) {
+        $('#SQ5').append('<h3>' + playerTwo + '</h3>');
+        SQ5 = -1;
         player = playerOne;
         playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
         playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
-    // Check if user has a centre piece, if so, computer goes to corner
+    // If user has two corners and computer has centre piece, computer chooses an edge
+    } else if (SQ5 === -1 && (SQ1 === 1 & SQ9 === 1)) {
+        if (SQ2 === 0) {
+            $('#SQ2').append('<h3>' + playerTwo + '</h3>');
+            SQ2 = -1;
+            player = playerOne;
+            playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
+            playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
+        } else if (SQ4 === 0) {
+            $('#SQ4').append('<h3>' + playerTwo + '</h3>');
+            SQ4 = -1;
+            player = playerOne;
+            playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
+            playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
+        } else if (SQ6 === 0) {
+            $('#SQ6').append('<h3>' + playerTwo + '</h3>');
+            SQ6 = -1;
+            player = playerOne;
+            playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
+            playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
+        } else if (SQ8 === 0) {
+            $('#SQ8').append('<h3>' + playerTwo + '</h3>');
+            SQ8 = -1;
+            player = playerOne;
+            playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
+            playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
+        };
+    } else if (SQ5 === -1 && (SQ3 === 1 & SQ7 === 1)) {
+        if (SQ2 === 0) {
+            $('#SQ2').append('<h3>' + playerTwo + '</h3>');
+            SQ2 = -1;
+            player = playerOne;
+            playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
+            playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
+        } else if (SQ4 === 0) {
+            $('#SQ4').append('<h3>' + playerTwo + '</h3>');
+            SQ4 = -1;
+            player = playerOne;
+            playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
+            playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
+        } else if (SQ6 === 0) {
+            $('#SQ6').append('<h3>' + playerTwo + '</h3>');
+            SQ6 = -1;
+            player = playerOne;
+            playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
+            playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
+        } else if (SQ8 === 0) {
+            $('#SQ8').append('<h3>' + playerTwo + '</h3>');
+            SQ8 = -1;
+            player = playerOne;
+            playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
+            playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
+        };
+    // Check if user has a centre piece, if so, computer goes to an empty corner
     } else if (SQ5 === 1 && SQ1 === 0) {
         $('#SQ1').append('<h3>' + playerTwo + '</h3>');
         SQ1 = -1;
