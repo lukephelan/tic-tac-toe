@@ -2,7 +2,7 @@
 
 [GitHub Repo] (https://github.com/lukephelan/tic-tac-toe)
 
-Hosted Version
+[Hosted Version] (http://lukephelan.github.io/tic-tac-toe/)
 
 This is a Javascript game of Tic-Tac-Toe featuring three modes of play:
 
