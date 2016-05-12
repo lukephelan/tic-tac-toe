@@ -1,4 +1,4 @@
-### Tic-Tac-Toe
+# Tic-Tac-Toe
 
 [GitHub Repo] (https://github.com/lukephelan/tic-tac-toe)
 
@@ -25,16 +25,16 @@ For Two-Player Mode:
 * User simply alternates clicking on the board where they wish to place their marker
 * The marker switches between 'X' and 'O' accordingly
 
-For Single-Player (Easy Mode):
+For Single-Player Mode (Easy):
 
-* If the Computer has a chance to win, it will take it
-* Then, if the User has a chance to win, the Computer will block it
-* If neither the Computer or the User have a chance to win, the Computer will place their marker in a random square
+* If the Computer has the chance to win, it will take it
+* Then, if the User has the chance to win, the Computer will block it
+* If neither the Computer nor the User have the chance to win, the Computer will place their marker in a random square
 
-For Single-Player (Hard Mode):
+For Single-Player Mode (Hard):
 
-* If the Computer has a chance to win, it will take it
-* Then, if the User has a chance to win, the Computer will block it
+* If the Computer has the chance to win, it will take it
+* Then, if the User has the chance to win, the Computer will block it
 * Then, if the User has two opposing corner squares, and the Computer has the centre square, the Computer will choose a middle edge square to force the User to block three-in-a-row, probably resulting in a tie-game
 * Then, if the User has a centre square, the Computer will choose an empty corner
 * Then, the Computer will choose any square, starting with the centre square first, then corners, then edges
@@ -46,7 +46,7 @@ Potential improvements for the future:
 * Randomly assign which player goes first
 * Allow for a user-chosen maximum number of rounds
 * Players can choose their own icons
-* Line to dash across the three winning squares
-* Implement a timer for players to make a move (with customisable times)
-* Use LocalStorage or SessionStorage
+* Display a line across the three winning squares
+* Implement a timer for players to make their move (with customisable limits)
+* Use LocalStorage or SessionStorage to persist data locally
 * Connect to a pre-built backend for persistence
