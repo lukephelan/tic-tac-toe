@@ -43,7 +43,6 @@ var SQ7 = 0;
 var SQ8 = 0;
 var SQ9 = 0;
 
-
 //  When selecting the number of players in the menu,
 //  hides or displays the second players name and the
 //  AI's difficulty mode
@@ -63,7 +62,6 @@ numberOfPlayers.on("change", function(){
         difficultyOption.css('display', 'none');
     };
 });
-
 
 // Hide the menu area when clicking the start button
 // Display the elements of the game area
@@ -99,24 +97,7 @@ startButton.on('click', function(event) {
     };
 });
 
-
-function switchToPlayerTwo() {
-    player = playerTwo;
-    playerOneScore.css({'border': 'solid rgba(247, 54, 54, 0)',
-        'animation': 'none', 'background-color': 'transparent'});
-    playerTwoScore.css({'border': 'solid rgb(255, 96, 110)',
-        'border-radius': '10px', 'animation': 'blinker 1s linear infinite',
-        'background-color': 'rgb(222, 239, 239)'});
-};
-
-function switchToPlayerOne() {
-    player = playerOne;
-    playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)',
-        'animation': 'none', 'background-color': 'transparent'});
-    playerOneScore.css({'border': 'solid rgb(255, 96, 110)',
-        'border-radius': '10px', 'animation': 'blinker 1s linear infinite',
-        'background-color': 'rgb(222, 239, 239)'});
-};
+// SINGLE-PLAYER EASY MODE
 
 function onePlayerEasy(){
     $('.square').click(function(){
@@ -509,43 +490,6 @@ function computerTurnEasy(){
     checkWinnerEasy();
 };
 
-function playerOneWins(){
-    console.log("Player One wins!");
-    declareWinner.text(playerOneNameText + " Wins!");
-    oneWins += 1;
-    roundCount += 1;
-    playerOneScore.text(playerOneNameText + ": " + oneWins);
-    playerOneScore.css({'border': 'solid rgba(247, 54, 54, 0)',
-        'animation': 'none', 'background-color': 'transparent'});
-    playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)',
-        'animation': 'none', 'background-color': 'transparent'});
-    setTimeout(clearScreen, 2000);
-};
-
-function playerTwoWins(){
-    console.log("Player Two wins!");
-    declareWinner.text(playerTwoNameText + " Wins!");
-    twoWins += 1;
-    roundCount += 1;
-    playerTwoScore.text(playerTwoNameText + ": " + twoWins);
-    playerOneScore.css({'border': 'solid rgba(247, 54, 54, 0)',
-        'animation': 'none', 'background-color': 'transparent'});
-    playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)',
-        'animation': 'none', 'background-color': 'transparent'});
-    setTimeout(clearScreen, 2000);
-};
-
-function gameIsDraw(){
-    console.log("Game is a draw");
-    declareWinner.text("Draw!");
-    roundCount += 1;
-    playerOneScore.css({'border': 'solid rgba(247, 54, 54, 0)',
-        'animation': 'none', 'background-color': 'transparent'});
-    playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)',
-        'animation': 'none', 'background-color': 'transparent'});
-    setTimeout(clearScreen, 2000);
-};
-
 function checkWinnerEasy() {
     // Check the eight possible winning conditions to see
     // if either player has won
@@ -569,6 +513,8 @@ function checkWinnerEasy() {
         setTimeout(computerTurnEasy, 1000);
     };
 };
+
+// SINGLE-PLAYER HARD MODE
 
 function onePlayerHard(){
     $('.square').click(function(){
@@ -969,7 +915,6 @@ function computerTurnHard(){
     checkWinnerHard();
 };
 
-
 function checkWinnerHard() {
     if (SQ1 + SQ2 + SQ3 === 3 || SQ4 + SQ5 + SQ6 === 3
         || SQ7 + SQ8 + SQ9 === 3 || SQ1 + SQ4 + SQ7 === 3
@@ -988,6 +933,8 @@ function checkWinnerHard() {
         setTimeout(computerTurnHard, 1000);
     };
 };
+
+// TWO-PLAYER MODE
 
 function twoPlayer(){
     $('.square').click(function(){
@@ -1138,6 +1085,66 @@ function checkWinner() {
     };
 };
 
+// SWITCH FUNCTIONS
+
+function switchToPlayerOne() {
+    player = playerOne;
+    playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)',
+        'animation': 'none', 'background-color': 'transparent'});
+    playerOneScore.css({'border': 'solid rgb(255, 96, 110)',
+        'border-radius': '10px', 'animation': 'blinker 1s linear infinite',
+        'background-color': 'rgb(222, 239, 239)'});
+};
+
+function switchToPlayerTwo() {
+    player = playerTwo;
+    playerOneScore.css({'border': 'solid rgba(247, 54, 54, 0)',
+        'animation': 'none', 'background-color': 'transparent'});
+    playerTwoScore.css({'border': 'solid rgb(255, 96, 110)',
+        'border-radius': '10px', 'animation': 'blinker 1s linear infinite',
+        'background-color': 'rgb(222, 239, 239)'});
+};
+
+// WINNING FUNCTIONS
+
+function playerOneWins(){
+    console.log("Player One wins!");
+    declareWinner.text(playerOneNameText + " Wins!");
+    oneWins += 1;
+    roundCount += 1;
+    playerOneScore.text(playerOneNameText + ": " + oneWins);
+    playerOneScore.css({'border': 'solid rgba(247, 54, 54, 0)',
+        'animation': 'none', 'background-color': 'transparent'});
+    playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)',
+        'animation': 'none', 'background-color': 'transparent'});
+    setTimeout(clearScreen, 2000);
+};
+
+function playerTwoWins(){
+    console.log("Player Two wins!");
+    declareWinner.text(playerTwoNameText + " Wins!");
+    twoWins += 1;
+    roundCount += 1;
+    playerTwoScore.text(playerTwoNameText + ": " + twoWins);
+    playerOneScore.css({'border': 'solid rgba(247, 54, 54, 0)',
+        'animation': 'none', 'background-color': 'transparent'});
+    playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)',
+        'animation': 'none', 'background-color': 'transparent'});
+    setTimeout(clearScreen, 2000);
+};
+
+function gameIsDraw(){
+    console.log("Game is a draw");
+    declareWinner.text("Draw!");
+    roundCount += 1;
+    playerOneScore.css({'border': 'solid rgba(247, 54, 54, 0)',
+        'animation': 'none', 'background-color': 'transparent'});
+    playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)',
+        'animation': 'none', 'background-color': 'transparent'});
+    setTimeout(clearScreen, 2000);
+};
+
+// OTHER FUNCTIONS
 
 function clearScreen(){
     allRows.css('display', 'none');
