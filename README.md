@@ -50,3 +50,4 @@ Potential improvements for the future:
 * Implement a timer for players to make their move (with customisable limits)
 * Use LocalStorage or SessionStorage to persist data locally
 * Connect to a pre-built backend for persistence
+* Replace repetitive code with for-loops
