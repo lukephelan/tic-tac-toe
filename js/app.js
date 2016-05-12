@@ -102,14 +102,20 @@ startButton.on('click', function(event) {
 
 function switchToPlayerTwo() {
     player = playerTwo;
-    playerOneScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
-    playerTwoScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
+    playerOneScore.css({'border': 'solid rgba(247, 54, 54, 0)',
+        'animation': 'none', 'background-color': 'transparent'});
+    playerTwoScore.css({'border': 'solid rgb(255, 96, 110)',
+        'border-radius': '10px', 'animation': 'blinker 1s linear infinite',
+        'background-color': 'rgb(222, 239, 239)'});
 };
 
 function switchToPlayerOne() {
     player = playerOne;
-    playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
-    playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
+    playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)',
+        'animation': 'none', 'background-color': 'transparent'});
+    playerOneScore.css({'border': 'solid rgb(255, 96, 110)',
+        'border-radius': '10px', 'animation': 'blinker 1s linear infinite',
+        'background-color': 'rgb(222, 239, 239)'});
 };
 
 function onePlayerEasy(){
@@ -117,7 +123,10 @@ function onePlayerEasy(){
         if (player === playerTwo) {
             return;
         } else {
-            var square = $(this).map(function(){ return this.id }).get().join(', ');
+            var square = $(this)
+                .map(function(){ return this.id })
+                .get()
+                .join(', ');
             console.log(square);
 
                 // In future, this is a for loop that could be used instead of
@@ -506,8 +515,10 @@ function playerOneWins(){
     oneWins += 1;
     roundCount += 1;
     playerOneScore.text(playerOneNameText + ": " + oneWins);
-    playerOneScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
-    playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
+    playerOneScore.css({'border': 'solid rgba(247, 54, 54, 0)',
+        'animation': 'none', 'background-color': 'transparent'});
+    playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)',
+        'animation': 'none', 'background-color': 'transparent'});
     setTimeout(clearScreen, 2000);
 };
 
@@ -517,8 +528,10 @@ function playerTwoWins(){
     twoWins += 1;
     roundCount += 1;
     playerTwoScore.text(playerTwoNameText + ": " + twoWins);
-    playerOneScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
-    playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
+    playerOneScore.css({'border': 'solid rgba(247, 54, 54, 0)',
+        'animation': 'none', 'background-color': 'transparent'});
+    playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)',
+        'animation': 'none', 'background-color': 'transparent'});
     setTimeout(clearScreen, 2000);
 };
 
@@ -526,24 +539,30 @@ function gameIsDraw(){
     console.log("Game is a draw");
     declareWinner.text("Draw!");
     roundCount += 1;
-    playerOneScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
-    playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
+    playerOneScore.css({'border': 'solid rgba(247, 54, 54, 0)',
+        'animation': 'none', 'background-color': 'transparent'});
+    playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)',
+        'animation': 'none', 'background-color': 'transparent'});
     setTimeout(clearScreen, 2000);
 };
 
 function checkWinnerEasy() {
-    // Check the eight possible winning conditions to see if either player has won
-    if (SQ1 + SQ2 + SQ3 === 3 || SQ4 + SQ5 + SQ6 === 3 || SQ7 + SQ8 + SQ9 === 3
-        || SQ1 + SQ4 + SQ7 === 3 || SQ2 + SQ5 + SQ8 === 3 || SQ3 + SQ6 + SQ9 === 3
+    // Check the eight possible winning conditions to see
+    // if either player has won
+    if (SQ1 + SQ2 + SQ3 === 3 || SQ4 + SQ5 + SQ6 === 3
+        || SQ7 + SQ8 + SQ9 === 3 || SQ1 + SQ4 + SQ7 === 3
+        || SQ2 + SQ5 + SQ8 === 3 || SQ3 + SQ6 + SQ9 === 3
         || SQ1 + SQ5 + SQ9 === 3 || SQ3 + SQ5 + SQ7 === 3) {
             playerOneWins();
-    } else if (SQ1 + SQ2 + SQ3 === -3 || SQ4 + SQ5 + SQ6 === -3 || SQ7 + SQ8 + SQ9 === -3
-            || SQ1 + SQ4 + SQ7 === -3 || SQ2 + SQ5 + SQ8 === -3 || SQ3 + SQ6 + SQ9 === -3
+    } else if (SQ1 + SQ2 + SQ3 === -3 || SQ4 + SQ5 + SQ6 === -3
+            || SQ7 + SQ8 + SQ9 === -3 || SQ1 + SQ4 + SQ7 === -3
+            || SQ2 + SQ5 + SQ8 === -3 || SQ3 + SQ6 + SQ9 === -3
             || SQ1 + SQ5 + SQ9 === -3 || SQ3 + SQ5 + SQ7 === -3) {
                 playerTwoWins();
     // If all the squares are full and none of the winning conditions are met,
     // the game is a draw
-    } else if (SQ1 != 0 && SQ2 != 0 && SQ3 != 0 && SQ4 != 0 && SQ5 != 0 && SQ6 != 0 && SQ7 != 0 && SQ8 != 0 && SQ9 != 0) {
+    } else if (SQ1 != 0 && SQ2 != 0 && SQ3 != 0 && SQ4 != 0 && SQ5 != 0
+            && SQ6 != 0 && SQ7 != 0 && SQ8 != 0 && SQ9 != 0) {
         gameIsDraw();
     } else if (player === playerTwo){
     // Otherwise it's the computer's turn
@@ -556,7 +575,10 @@ function onePlayerHard(){
         if (player === playerTwo) {
             return;
         } else {
-            var square = $(this).map(function(){ return this.id }).get().join(', ');
+            var square = $(this)
+                .map(function(){ return this.id })
+                .get()
+                .join(', ');
             console.log(square);
             // For each square, check if it is empty, then append text that
             // matches the player icon, and add 1 to the relevant variable
@@ -776,9 +798,6 @@ function computerTurnHard(){
         $('#SQ4').append('<h3>' + playerTwo + '</h3>');
         SQ4 = -1;
         switchToPlayerOne();
-        // player = playerOne;
-        // playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
-        // playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
     } else if (SQ7 === 0 && (SQ1 === 1 && SQ4 === 1)) {
         $('#SQ7').append('<h3>' + playerTwo + '</h3>');
         SQ7 = -1;
@@ -952,15 +971,18 @@ function computerTurnHard(){
 
 
 function checkWinnerHard() {
-    if (SQ1 + SQ2 + SQ3 === 3 || SQ4 + SQ5 + SQ6 === 3 || SQ7 + SQ8 + SQ9 === 3
-        || SQ1 + SQ4 + SQ7 === 3 || SQ2 + SQ5 + SQ8 === 3 || SQ3 + SQ6 + SQ9 === 3
+    if (SQ1 + SQ2 + SQ3 === 3 || SQ4 + SQ5 + SQ6 === 3
+        || SQ7 + SQ8 + SQ9 === 3 || SQ1 + SQ4 + SQ7 === 3
+        || SQ2 + SQ5 + SQ8 === 3 || SQ3 + SQ6 + SQ9 === 3
         || SQ1 + SQ5 + SQ9 === 3 || SQ3 + SQ5 + SQ7 === 3) {
             playerOneWins();
-    } else if (SQ1 + SQ2 + SQ3 === -3 || SQ4 + SQ5 + SQ6 === -3 || SQ7 + SQ8 + SQ9 === -3
-            || SQ1 + SQ4 + SQ7 === -3 || SQ2 + SQ5 + SQ8 === -3 || SQ3 + SQ6 + SQ9 === -3
+    } else if (SQ1 + SQ2 + SQ3 === -3 || SQ4 + SQ5 + SQ6 === -3
+            || SQ7 + SQ8 + SQ9 === -3 || SQ1 + SQ4 + SQ7 === -3
+            || SQ2 + SQ5 + SQ8 === -3 || SQ3 + SQ6 + SQ9 === -3
             || SQ1 + SQ5 + SQ9 === -3 || SQ3 + SQ5 + SQ7 === -3) {
                 playerTwoWins();
-    } else if (SQ1 != 0 && SQ2 != 0 && SQ3 != 0 && SQ4 != 0 && SQ5 != 0 && SQ6 != 0 && SQ7 != 0 && SQ8 != 0 && SQ9 != 0) {
+    } else if (SQ1 != 0 && SQ2 != 0 && SQ3 != 0 && SQ4 != 0 && SQ5 != 0
+            && SQ6 != 0 && SQ7 != 0 && SQ8 != 0 && SQ9 != 0) {
         gameIsDraw();
     } else if (player === playerTwo){
         setTimeout(computerTurnHard, 1000);
@@ -970,7 +992,10 @@ function checkWinnerHard() {
 function twoPlayer(){
     $('.square').click(function(){
         if (player === playerOne) {
-            var square = $(this).map(function(){ return this.id }).get().join(', ');
+            var square = $(this)
+                .map(function(){ return this.id })
+                .get()
+                .join(', ');
             console.log(square);
             if (square === "SQ1") {
                 if (SQ1 === 0) {
@@ -1031,9 +1056,10 @@ function twoPlayer(){
             checkWinner();
 
         } else if (player === playerTwo) {
-            var square = $(this).map(function(){ return this.id }).get().join(', ');
-
-
+            var square = $(this)
+                            .map(function(){ return this.id })
+                            .get()
+                            .join(', ');
             console.log(square);
             if (square === "SQ1") {
                 if (SQ1 === 0) {
@@ -1096,15 +1122,18 @@ function twoPlayer(){
 };
 
 function checkWinner() {
-    if (SQ1 + SQ2 + SQ3 === 3 || SQ4 + SQ5 + SQ6 === 3 || SQ7 + SQ8 + SQ9 === 3
-        || SQ1 + SQ4 + SQ7 === 3 || SQ2 + SQ5 + SQ8 === 3 || SQ3 + SQ6 + SQ9 === 3
-        || SQ1 + SQ5 + SQ9 === 3 || SQ3 + SQ5 + SQ7 === 3) {
-            playerOneWins();
-    } else if (SQ1 + SQ2 + SQ3 === -3 || SQ4 + SQ5 + SQ6 === -3 || SQ7 + SQ8 + SQ9 === -3
-            || SQ1 + SQ4 + SQ7 === -3 || SQ2 + SQ5 + SQ8 === -3 || SQ3 + SQ6 + SQ9 === -3
+    if (SQ1 + SQ2 + SQ3 === 3 || SQ4 + SQ5 + SQ6 === 3
+            || SQ7 + SQ8 + SQ9 === 3 || SQ1 + SQ4 + SQ7 === 3
+            || SQ2 + SQ5 + SQ8 === 3 || SQ3 + SQ6 + SQ9 === 3
+            || SQ1 + SQ5 + SQ9 === 3 || SQ3 + SQ5 + SQ7 === 3) {
+                playerOneWins();
+    } else if (SQ1 + SQ2 + SQ3 === -3 || SQ4 + SQ5 + SQ6 === -3
+            || SQ7 + SQ8 + SQ9 === -3 || SQ1 + SQ4 + SQ7 === -3
+            || SQ2 + SQ5 + SQ8 === -3 || SQ3 + SQ6 + SQ9 === -3
             || SQ1 + SQ5 + SQ9 === -3 || SQ3 + SQ5 + SQ7 === -3) {
                 playerTwoWins();
-    } else if (SQ1 != 0 && SQ2 != 0 && SQ3 != 0 && SQ4 != 0 && SQ5 != 0 && SQ6 != 0 && SQ7 != 0 && SQ8 != 0 && SQ9 != 0) {
+    } else if (SQ1 != 0 && SQ2 != 0 && SQ3 != 0 && SQ4 != 0 && SQ5 != 0
+        && SQ6 != 0 && SQ7 != 0 && SQ8 != 0 && SQ9 != 0) {
         gameIsDraw();
     };
 };
@@ -1121,9 +1150,7 @@ function clearScreen(){
 
 continueButton.on('click', function(event){
     $('h3').remove();
-    player = playerOne;
-    playerTwoScore.css({'border': 'solid rgba(247, 54, 54, 0)', 'animation': 'none', 'background-color': 'transparent'});
-    playerOneScore.css({'border': 'solid rgb(255, 96, 110)', 'border-radius': '10px', 'animation': 'blinker 1s linear infinite', 'background-color': 'rgb(222, 239, 239)'});
+    switchToPlayerOne();
     SQ1 = 0;
     SQ2 = 0;
     SQ3 = 0;
